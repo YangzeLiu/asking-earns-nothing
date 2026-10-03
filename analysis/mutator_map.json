@@ -978,7 +978,7 @@
  "_audit": {
   "built_by": "the authors, from the BFCL function source (bfcl-eval 2026.3.23), 2026-09-16",
   "corrections_applied": [
-   "authenticate_travel was relabelled login->mutate on review and reverted to login: the login carve-out applies to all seven login/logout functions or none"
+   "authenticate_travel is labelled login: the login carve-out applies to all seven login/logout functions or none"
   ],
   "known_vacuous_entries": [
    "clear",
