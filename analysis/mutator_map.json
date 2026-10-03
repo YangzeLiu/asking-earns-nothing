@@ -1,0 +1,997 @@
+{
+ "conflicts": {
+  "add": [
+   {
+    "class": "MathAPI",
+    "file": "math_api.py",
+    "label": "read"
+   },
+   {
+    "class": "VectorStore",
+    "file": "memory_vector.py",
+    "label": "mutate"
+   }
+  ]
+ },
+ "functions": {
+  "absolute_value": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "activateParkingBrake": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets self.parkingBrakeStatus and force fields"
+  },
+  "add": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "returns a+b only, no state; conflicts with VectorStore.add"
+  },
+  "add_contact": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "mutate",
+   "why": "adds to self.user_map, increments user_count"
+  },
+  "add_to_watchlist": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "mutate",
+   "why": "self.watch_list.append(stock)"
+  },
+  "adjustClimateControl": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets acTemperature, fanSpeed, acMode"
+  },
+  "archival_memory_add": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "mutate",
+   "why": "adds entry to self.archival_memory dict/store"
+  },
+  "archival_memory_clear": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "mutate",
+   "why": "resets self.archival_memory to empty"
+  },
+  "archival_memory_key_search": {
+   "class": "MemoryAPI_kv",
+   "file": "memory_kv.py",
+   "label": "read",
+   "why": "BM25 search over keys, no write"
+  },
+  "archival_memory_list_keys": {
+   "class": "MemoryAPI_kv",
+   "file": "memory_kv.py",
+   "label": "read",
+   "why": "returns list(self.archival_memory.keys())"
+  },
+  "archival_memory_remove": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "mutate",
+   "why": "deletes entry from self.archival_memory"
+  },
+  "archival_memory_replace": {
+   "class": "MemoryAPI_kv",
+   "file": "memory_kv.py",
+   "label": "mutate",
+   "why": "overwrites self.archival_memory[key] value"
+  },
+  "archival_memory_retrieve": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "read",
+   "why": "looks up key/query, no write"
+  },
+  "archival_memory_retrieve_all": {
+   "class": "MemoryAPI_vector",
+   "file": "memory_vector.py",
+   "label": "read",
+   "why": "returns all entries, no write"
+  },
+  "archival_memory_update": {
+   "class": "MemoryAPI_vector",
+   "file": "memory_vector.py",
+   "label": "mutate",
+   "why": "delegates to VectorStore.update, mutates _store"
+  },
+  "authenticate_travel": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "login",
+   "why": "sets tokens plus user_first_name/user_last_name; all seven login/logout functions write public attributes, so under state_checker every one of them is a state change. The login carve-out (logging in is not a consequential action) applies to all seven together."
+  },
+  "authenticate_twitter": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "login",
+   "why": "only sets self.authenticated flag"
+  },
+  "book_flight": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "mutate",
+   "why": "decrements card balance, adds booking_record entry"
+  },
+  "cancel_booking": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "mutate",
+   "why": "refunds balance, deletes booking_record entry"
+  },
+  "cancel_order": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "mutate",
+   "why": "self.orders[order_id]['status']='Cancelled'"
+  },
+  "cat": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "returns file._read(), no write"
+  },
+  "cd": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "moves private _current_dir pointer, not checked state"
+  },
+  "check_tire_pressure": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "reads tire pressure fields, no write"
+  },
+  "clear": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "mutate",
+   "why": "resets self._store dict and self._index"
+  },
+  "close_ticket": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "mutate",
+   "why": "ticket['status'] = 'Closed' in queue"
+  },
+  "comment": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "mutate",
+   "why": "appends to self.comments[tweet_id]"
+  },
+  "compute_exchange_rate": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "pure computation, no self write"
+  },
+  "contact_customer_support": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "reads self.booking_record, no write"
+  },
+  "core_memory_add": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "mutate",
+   "why": "adds entry to self.core_memory dict/store"
+  },
+  "core_memory_clear": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "mutate",
+   "why": "resets self.core_memory to empty"
+  },
+  "core_memory_key_search": {
+   "class": "MemoryAPI_kv",
+   "file": "memory_kv.py",
+   "label": "read",
+   "why": "BM25 search over keys, no write"
+  },
+  "core_memory_list_keys": {
+   "class": "MemoryAPI_kv",
+   "file": "memory_kv.py",
+   "label": "read",
+   "why": "returns list(self.core_memory.keys())"
+  },
+  "core_memory_remove": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "mutate",
+   "why": "deletes entry from self.core_memory"
+  },
+  "core_memory_replace": {
+   "class": "MemoryAPI_kv",
+   "file": "memory_kv.py",
+   "label": "mutate",
+   "why": "overwrites self.core_memory[key] value"
+  },
+  "core_memory_retrieve": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "read",
+   "why": "looks up key/query, no write"
+  },
+  "core_memory_retrieve_all": {
+   "class": "MemoryAPI_kv, MemoryAPI_vector",
+   "file": "memory_kv.py, memory_vector.py",
+   "label": "read",
+   "why": "returns all entries, no write"
+  },
+  "core_memory_update": {
+   "class": "MemoryAPI_vector",
+   "file": "memory_vector.py",
+   "label": "mutate",
+   "why": "delegates to VectorStore.update, mutates _store"
+  },
+  "cp": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "_add_file/_add_directory writes into contents"
+  },
+  "create_ticket": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "mutate",
+   "why": "appends to self.ticket_queue, increments counter"
+  },
+  "delete_message": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "mutate",
+   "why": "self.inbox.remove(message)"
+  },
+  "diff": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "compares contents, no write"
+  },
+  "displayCarStatus": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "reads status fields, no write"
+  },
+  "display_log": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "echoes input messages, no state change"
+  },
+  "divide": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "du": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "sums file sizes, no mutation"
+  },
+  "echo": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "success path calls _get_item(file)._write(content)"
+  },
+  "edit_ticket": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "mutate",
+   "why": "overwrites ticket[key] fields in queue"
+  },
+  "estimate_distance": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "lookup table, no self write"
+  },
+  "estimate_drive_feasibility_by_mileage": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "reads self.fuelLevel, no write"
+  },
+  "export": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "read",
+   "why": "returns snapshot dict, no write"
+  },
+  "fetch_url_content": {
+   "class": "WebSearchAPI",
+   "file": "web_search.py",
+   "label": "read",
+   "why": "fetches and returns content, no self write"
+  },
+  "fillFuelTank": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "self.fuelLevel += fuelAmount"
+  },
+  "filter_stocks_by_price": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "filters self.stocks, no write"
+  },
+  "find": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "recursive traversal, no mutation"
+  },
+  "find_nearest_tire_shop": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "returns hardcoded string, no write"
+  },
+  "follow_user": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "mutate",
+   "why": "self.following_list.append(username)"
+  },
+  "fund_account": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "mutate",
+   "why": "increments balance, appends transaction_history"
+  },
+  "gallon_to_liter": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "pure unit conversion, no self write"
+  },
+  "get_account_info": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "returns self.account_info, no write"
+  },
+  "get_all_credit_cards": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "returns self.credit_card_list, no write"
+  },
+  "get_available_stocks": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "sector_map is a local var, not self state"
+  },
+  "get_booking_history": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "returns deepcopy of self.booking_record"
+  },
+  "get_budget_fiscal_year": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "returns hardcoded string, no write"
+  },
+  "get_credit_card_balance": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "reads self.credit_card_list, no write"
+  },
+  "get_current_speed": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "random value returned, not stored"
+  },
+  "get_current_time": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "returns constant CURRENT_TIME, no write"
+  },
+  "get_flight_cost": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "only writes private unreachable _flight_cost_lookup cache"
+  },
+  "get_message_stats": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "read",
+   "why": "iterates self.inbox, no write"
+  },
+  "get_nearest_airport_by_city": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "local airport_map lookup, no self write"
+  },
+  "get_order_details": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "reads self.orders, no write"
+  },
+  "get_order_history": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "returns list(self.orders.keys())"
+  },
+  "get_outside_temperature_from_google": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "random value returned, not stored on self"
+  },
+  "get_outside_temperature_from_weather_com": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "returns static error dict, no write"
+  },
+  "get_stock_info": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "reads self.stocks, no write"
+  },
+  "get_symbol_by_name": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "local symbol_map lookup, no self write"
+  },
+  "get_ticket": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "read",
+   "why": "_find_ticket lookup, no write"
+  },
+  "get_transaction_history": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "filters self.transaction_history, no write"
+  },
+  "get_tweet": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "looks up self.tweets, no write"
+  },
+  "get_tweet_comments": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "reads self.comments, no write"
+  },
+  "get_user_id": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "read",
+   "why": "looks up user_map, no write"
+  },
+  "get_user_stats": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "aggregates counts, no write"
+  },
+  "get_user_tickets": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "read",
+   "why": "filters self.ticket_queue, no write"
+  },
+  "get_user_tweets": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "filters self.tweets, no write"
+  },
+  "get_watchlist": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "returns self.watch_list, no write"
+  },
+  "get_zipcode_based_on_city": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "lookup table, no self write"
+  },
+  "grep": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "returns matching lines only"
+  },
+  "imperial_si_conversion": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "list_all_airports": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "returns hardcoded list, no write"
+  },
+  "list_all_following": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "returns self.following_list, no write"
+  },
+  "list_users": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "read",
+   "why": "returns list(self.user_map.keys())"
+  },
+  "liter_to_gallon": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "read",
+   "why": "pure unit conversion, no self write"
+  },
+  "load_from_snapshot": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "mutate",
+   "why": "sets self._store/_next_id, rebuilds index"
+  },
+  "lockDoors": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets self.doorStatus, remainingUnlockedDoors"
+  },
+  "logarithm": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "logout": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "login",
+   "why": "only clears self.current_user to None"
+  },
+  "ls": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "lists contents dict, no mutation"
+  },
+  "max_value": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "mean": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "memory_append": {
+   "class": "MemoryAPI_rec_sum",
+   "file": "memory_rec_sum.py",
+   "label": "mutate",
+   "why": "self.memory += text"
+  },
+  "memory_clear": {
+   "class": "MemoryAPI_rec_sum",
+   "file": "memory_rec_sum.py",
+   "label": "mutate",
+   "why": "self.memory = '' clears content"
+  },
+  "memory_replace": {
+   "class": "MemoryAPI_rec_sum",
+   "file": "memory_rec_sum.py",
+   "label": "mutate",
+   "why": "self.memory = self.memory.replace(...)"
+  },
+  "memory_retrieve": {
+   "class": "MemoryAPI_rec_sum",
+   "file": "memory_rec_sum.py",
+   "label": "read",
+   "why": "returns self.memory, no write"
+  },
+  "memory_update": {
+   "class": "MemoryAPI_rec_sum",
+   "file": "memory_rec_sum.py",
+   "label": "mutate",
+   "why": "self.memory = text replaces content"
+  },
+  "mention": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "mutate",
+   "why": "tweet['mentions'].extend(...) inside self.tweets"
+  },
+  "message_get_login_status": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "read",
+   "why": "reads self.current_user, no write"
+  },
+  "message_login": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "login",
+   "why": "only sets self.current_user"
+  },
+  "min_value": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "mkdir": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "_current_dir._add_directory extends contents dict"
+  },
+  "multiply": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "mv": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "contents.pop then _add_file/_add_directory"
+  },
+  "notify_price_change": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "reads self.stocks, no write"
+  },
+  "percentage": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "place_order": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "mutate",
+   "why": "adds to self.orders, increments order_counter"
+  },
+  "post_tweet": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "mutate",
+   "why": "adds to self.tweets, increments tweet_counter"
+  },
+  "posting_get_login_status": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "reads self.authenticated, no write"
+  },
+  "power": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "pressBrakePedal": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets self.brakePedalStatus='pressed'/'released'"
+  },
+  "purchase_insurance": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "mutate",
+   "why": "decrements self.credit_card_list balance"
+  },
+  "pwd": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "reads _current_dir path only, no write"
+  },
+  "register_credit_card": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "mutate",
+   "why": "adds entry to self.credit_card_list"
+  },
+  "releaseBrakePedal": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets self.brakePedalStatus='released'"
+  },
+  "remove": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "mutate",
+   "why": "del self._store[vec_id]; index.remove_ids"
+  },
+  "remove_stock_from_watchlist": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "mutate",
+   "why": "self.watch_list.remove(symbol)"
+  },
+  "resolve_ticket": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "mutate",
+   "why": "sets ticket status/resolution fields"
+  },
+  "retrieve": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "read",
+   "why": "similarity search only, no write"
+  },
+  "retrieve_all": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "read",
+   "why": "returns entries list, no write"
+  },
+  "retrieve_invoice": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "reads self.booking_record, no write"
+  },
+  "retweet": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "mutate",
+   "why": "appends to self.retweets[username]"
+  },
+  "rm": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "contents.pop(file_name) removes item"
+  },
+  "rmdir": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "contents.pop(dir_name) removes empty dir"
+  },
+  "round_number": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "search_engine_query": {
+   "class": "WebSearchAPI",
+   "file": "web_search.py",
+   "label": "read",
+   "why": "external API call, no self state written"
+  },
+  "search_messages": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "read",
+   "why": "iterates self.inbox, no write"
+  },
+  "search_tweets": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "read",
+   "why": "filters self.tweets, no write"
+  },
+  "send_message": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "mutate",
+   "why": "appends to self.inbox, increments message_count"
+  },
+  "setCruiseControl": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets cruiseStatus, distanceToNextVehicle"
+  },
+  "setHeadlights": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets self.headLightStatus"
+  },
+  "set_budget_limit": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "mutate",
+   "why": "self.budget_limit=value, not an auth flag"
+  },
+  "set_navigation": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "self.destination = destination"
+  },
+  "si_unit_conversion": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "sort": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "returns sorted content, does not write back"
+  },
+  "square_root": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "standard_deviation": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "startEngine": {
+   "class": "VehicleControlAPI",
+   "file": "vehicle_control.py",
+   "label": "mutate",
+   "why": "sets self.engine_state"
+  },
+  "subtract": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "sum_values": {
+   "class": "MathAPI",
+   "file": "math_api.py",
+   "label": "read",
+   "why": "pure stateless computation, no self attribute written"
+  },
+  "tail": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "returns last lines, no write"
+  },
+  "ticket_get_login_status": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "read",
+   "why": "reads self.current_user, no write"
+  },
+  "ticket_login": {
+   "class": "TicketAPI",
+   "file": "ticket_api.py",
+   "label": "login",
+   "why": "only sets self.current_user"
+  },
+  "touch": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "mutate",
+   "why": "_current_dir._add_file extends contents dict"
+  },
+  "trading_get_login_status": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "read",
+   "why": "reads self.authenticated, no write"
+  },
+  "trading_login": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "login",
+   "why": "only sets self.authenticated=True"
+  },
+  "trading_logout": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "login",
+   "why": "only sets self.authenticated=False"
+  },
+  "travel_get_login_status": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "reads self.token_expires_in, no write"
+  },
+  "unfollow_user": {
+   "class": "TwitterAPI",
+   "file": "posting_api.py",
+   "label": "mutate",
+   "why": "self.following_list.remove(username)"
+  },
+  "update": {
+   "class": "VectorStore",
+   "file": "memory_vector.py",
+   "label": "mutate",
+   "why": "reindexes and overwrites self._store[vec_id]"
+  },
+  "verify_traveler_information": {
+   "class": "TravelAPI",
+   "file": "travel_booking.py",
+   "label": "read",
+   "why": "reads self.user_first_name/last_name, no write"
+  },
+  "view_messages_sent": {
+   "class": "MessageAPI",
+   "file": "message_api.py",
+   "label": "read",
+   "why": "iterates self.inbox, no write"
+  },
+  "wc": {
+   "class": "GorillaFileSystem",
+   "file": "gorilla_file_system.py",
+   "label": "read",
+   "why": "counts lines/words/chars, no write"
+  },
+  "withdraw_funds": {
+   "class": "TradingBot",
+   "file": "trading_bot.py",
+   "label": "mutate",
+   "why": "decrements balance, appends transaction_history"
+  }
+ },
+ "_audit": {
+  "built_by": "the authors, from the BFCL function source (bfcl-eval 2026.3.23), 2026-09-16",
+  "corrections_applied": [
+   "authenticate_travel was relabelled login->mutate on review and reverted to login: the login carve-out applies to all seven login/logout functions or none"
+  ],
+  "known_vacuous_entries": [
+   "clear",
+   "update",
+   "remove",
+   "add(VectorStore)",
+   "export",
+   "retrieve",
+   "retrieve_all",
+   "load_from_snapshot"
+  ],
+  "note": "echo is the only argument-conditional function in the suite (verified exhaustively)",
+  "login_note": "login-labelled functions DO change state_checker-visible attributes (authenticated / current_user / tokens). They are excluded from \"mutate\" by the login carve-out (logging in is not a consequential action), not because they are read-only. p1s reports the login-counted variant as a sensitivity.",
+  "name_collisions": "single-name keying; MemoryAPI_kv/MemoryAPI_vector share nine names and MathAPI.add (read) collides with VectorStore.add (mutate). Safe for the 365 pairs (no memory class appears); re-key by class before adding memory categories."
+ }
+}

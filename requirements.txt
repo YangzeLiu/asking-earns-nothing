@@ -1,0 +1,9 @@
+# Analysis and verification (Python 3.11 was used; 3.8+ works for pairs_package alone)
+numpy==1.26.4
+scipy==1.17.1
+matplotlib==3.9.0
+pillow==10.4.0
+# Benchmark data (function docs, possible answers) and, optionally, rollout regeneration
+bfcl-eval==2026.3.23
+# Only for the one classifier that calls a model (analysis/p1x_holdback_says.py); no table depends on it
+# openai>=1.0

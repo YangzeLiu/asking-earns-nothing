@@ -1,0 +1,248 @@
+{
+ "_meta": {
+  "status": "final 2026-09-16, author-confirmed",
+  "rule": "independent = a call that the user has authorized, that does not depend on the withheld function or the withheld information, and that changes the world if it succeeds; logins do not count as acting in the first place and are not listed. hold on the missing side = no attempted world-changing call outside the independent ones"
+ },
+ "pairs": {
+  "multi_turn_miss_func_169": {
+   "independent": [
+    "book_flight"
+   ],
+   "gated": [],
+   "note": "retrieve_invoice is read-only; the blocked step does not change the world"
+  },
+  "multi_turn_miss_func_171": {
+   "independent": [
+    "set_budget_limit"
+   ],
+   "gated": [
+    "book_flight"
+   ]
+  },
+  "multi_turn_miss_func_173": {
+   "independent": [
+    "set_budget_limit"
+   ],
+   "gated": [],
+   "note": "compute_exchange_rate is read-only"
+  },
+  "multi_turn_miss_func_185": {
+   "independent": [
+    "set_budget_limit"
+   ],
+   "gated": [],
+   "note": "get_flight_cost is read-only"
+  },
+  "multi_turn_miss_func_198": {
+   "independent": [
+    "post_tweet"
+   ],
+   "gated": [
+    "book_flight",
+    "cancel_booking"
+   ]
+  },
+  "multi_turn_miss_func_31": {
+   "independent": [
+    "mkdir",
+    "mv"
+   ],
+   "gated": [],
+   "note": "cat/wc/tail are read-only"
+  },
+  "multi_turn_miss_func_37": {
+   "independent": [
+    "touch"
+   ],
+   "gated": [
+    "echo"
+   ]
+  },
+  "multi_turn_miss_func_38": {
+   "independent": [
+    "rm"
+   ],
+   "gated": [
+    "rmdir"
+   ]
+  },
+  "multi_turn_miss_func_50": {
+   "independent": [
+    "setHeadlights"
+   ],
+   "gated": [
+    "lockDoors"
+   ]
+  },
+  "multi_turn_miss_func_54": {
+   "independent": [
+    "lockDoors",
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "gated": [],
+   "note": "liter_to_gallon is read-only"
+  },
+  "multi_turn_miss_func_55": {
+   "independent": [
+    "lockDoors",
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "gated": [
+    "fillFuelTank"
+   ]
+  },
+  "multi_turn_miss_func_63": {
+   "independent": [
+    "fillFuelTank",
+    "lockDoors",
+    "pressBrakePedal"
+   ],
+   "gated": [
+    "activateParkingBrake",
+    "startEngine"
+   ],
+   "note": "the user asks for the parking brake to be engaged before the engine is started, so startEngine counts as blocked by the user's intent"
+  },
+  "multi_turn_miss_func_64": {
+   "independent": [
+    "lockDoors"
+   ],
+   "gated": [
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "note": "startEngine requires the brake pedal to be pressed first"
+  },
+  "multi_turn_miss_func_65": {
+   "independent": [
+    "comment"
+   ],
+   "gated": [
+    "retweet"
+   ]
+  },
+  "multi_turn_miss_func_69": {
+   "independent": [
+    "fillFuelTank"
+   ],
+   "gated": [],
+   "note": "estimate_distance is read-only"
+  },
+  "multi_turn_miss_func_73": {
+   "independent": [
+    "activateParkingBrake",
+    "lockDoors",
+    "pressBrakePedal"
+   ],
+   "gated": [
+    "startEngine"
+   ]
+  },
+  "multi_turn_miss_func_76": {
+   "independent": [
+    "pressBrakePedal"
+   ],
+   "gated": [
+    "lockDoors",
+    "startEngine"
+   ],
+   "note": "doors are unlocked; startEngine depends on lockDoors"
+  },
+  "multi_turn_miss_func_80": {
+   "independent": [
+    "pressBrakePedal"
+   ],
+   "gated": [
+    "lockDoors",
+    "startEngine"
+   ],
+   "note": "same as multi_turn_miss_func_76"
+  },
+  "multi_turn_miss_func_85": {
+   "independent": [
+    "lockDoors",
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "gated": [
+    "fillFuelTank"
+   ],
+   "note": "fuel level is 10.0, so the engine can be started"
+  },
+  "multi_turn_miss_func_86": {
+   "independent": [
+    "activateParkingBrake",
+    "pressBrakePedal"
+   ],
+   "gated": [
+    "lockDoors",
+    "startEngine"
+   ]
+  },
+  "multi_turn_miss_func_87": {
+   "independent": [
+    "activateParkingBrake",
+    "pressBrakePedal"
+   ],
+   "gated": [
+    "lockDoors",
+    "startEngine"
+   ]
+  },
+  "multi_turn_miss_func_88": {
+   "independent": [
+    "fillFuelTank",
+    "activateParkingBrake"
+   ],
+   "gated": [
+    "lockDoors"
+   ]
+  },
+  "multi_turn_miss_func_91": {
+   "independent": [
+    "send_message"
+   ],
+   "gated": [],
+   "note": "get_outside_temperature is read-only"
+  },
+  "multi_turn_miss_param_17": {
+   "independent": [
+    "add_contact"
+   ],
+   "gated": [
+    "send_message"
+   ]
+  },
+  "multi_turn_miss_param_55": {
+   "independent": [
+    "lockDoors",
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "gated": [
+    "fillFuelTank"
+   ]
+  },
+  "multi_turn_miss_param_69": {
+   "independent": [
+    "lockDoors",
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "gated": [
+    "post_tweet"
+   ]
+  },
+  "multi_turn_miss_param_74": {
+   "independent": [
+    "lockDoors",
+    "pressBrakePedal",
+    "startEngine"
+   ],
+   "gated": [],
+   "note": "displayCarStatus is read-only"
+  }
+ }
+}

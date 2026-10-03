@@ -1,0 +1,232 @@
+miss_id,category,anchor_turn,withheld,verdict,reason,revised
+multi_turn_miss_func_1,miss_func,1,mv,valid,author: valid,0
+multi_turn_miss_func_5,miss_func,2,post_tweet,valid,author: valid,0
+multi_turn_miss_func_6,miss_func,0,touch;echo,valid,author: valid,0
+multi_turn_miss_func_7,miss_func,0,mkdir;echo,valid,author: valid,0
+multi_turn_miss_func_8,miss_func,2,post_tweet,valid,author: valid,0
+multi_turn_miss_func_10,miss_func,2,touch;echo,valid,author: valid,0
+multi_turn_miss_func_12,miss_func,0,cd,valid,author: valid,0
+multi_turn_miss_func_14,miss_func,3,add_contact,valid,send_message needs the contact that the withheld add_contact creates; the only other step is a login,1
+multi_turn_miss_func_16,miss_func,0,cp;echo,valid,author: valid,0
+multi_turn_miss_func_19,miss_func,1,cp;echo,valid,author: valid,0
+multi_turn_miss_func_21,miss_func,0,echo,valid,author: valid,0
+multi_turn_miss_func_22,miss_func,3,authenticate_twitter,valid,author: valid,0
+multi_turn_miss_func_23,miss_func,0,echo,valid,author: valid,0
+multi_turn_miss_func_24,miss_func,1,mv,valid,author: valid,0
+multi_turn_miss_func_27,miss_func,1,ticket_login,valid,author: valid,0
+multi_turn_miss_func_31,miss_func,0,wc;tail;cat,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_32,miss_func,1,logarithm,valid,author: valid,0
+multi_turn_miss_func_34,miss_func,1,echo,valid,author: valid,0
+multi_turn_miss_func_36,miss_func,1,cp;echo,valid,author: valid,0
+multi_turn_miss_func_37,miss_func,2,echo,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_38,miss_func,0,rmdir,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_39,miss_func,0,mkdir,valid,author: valid,0
+multi_turn_miss_func_40,miss_func,3,message_login,valid,author: valid,0
+multi_turn_miss_func_41,miss_func,0,get_user_id;list_users,valid,author: valid,0
+multi_turn_miss_func_42,miss_func,0,touch;echo,construction,"touch and echo both withheld, so no independent step; the reference touch omits the Lectures directory, so the complete side's reference is wrong",1
+multi_turn_miss_func_43,miss_func,3,message_login,valid,author: valid,0
+multi_turn_miss_func_45,miss_func,1,cd,valid,author: valid,0
+multi_turn_miss_func_46,miss_func,0,rm,valid,author: valid,0
+multi_turn_miss_func_50,miss_func,0,lockDoors,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_52,miss_func,0,startEngine,valid,author: valid,0
+multi_turn_miss_func_53,miss_func,1,pressBrakePedal,valid,author: valid,0
+multi_turn_miss_func_54,miss_func,0,liter_to_gallon,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_55,miss_func,0,fillFuelTank,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_59,miss_func,3,pressBrakePedal,valid,author: valid,0
+multi_turn_miss_func_61,miss_func,2,pressBrakePedal,valid,author: valid,0
+multi_turn_miss_func_62,miss_func,0,estimate_distance,valid,author: valid,0
+multi_turn_miss_func_63,miss_func,1,activateParkingBrake,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_64,miss_func,0,pressBrakePedal,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_65,miss_func,1,retweet,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_68,miss_func,1,startEngine,valid,author: valid,0
+multi_turn_miss_func_69,miss_func,0,estimate_distance,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_70,miss_func,0,fillFuelTank,valid,author: valid,0
+multi_turn_miss_func_72,miss_func,1,pressBrakePedal,valid,author: valid,0
+multi_turn_miss_func_73,miss_func,1,startEngine,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_74,miss_func,0,fillFuelTank,valid,author: valid,0
+multi_turn_miss_func_75,miss_func,2,retweet,valid,author: valid,0
+multi_turn_miss_func_76,miss_func,0,lockDoors,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_79,miss_func,0,lockDoors,valid,author: valid,0
+multi_turn_miss_func_80,miss_func,3,lockDoors,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_81,miss_func,1,startEngine,valid,author: valid,0
+multi_turn_miss_func_82,miss_func,1,fillFuelTank,valid,author: valid,0
+multi_turn_miss_func_84,miss_func,0,fillFuelTank,valid,author: valid,0
+multi_turn_miss_func_85,miss_func,1,fillFuelTank,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_86,miss_func,0,lockDoors,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_87,miss_func,2,lockDoors,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_88,miss_func,1,lockDoors,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_89,miss_func,3,lockDoors,valid,author: valid,0
+multi_turn_miss_func_91,miss_func,0,get_outside_temperature_from_google,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_92,miss_func,4,check_tire_pressure,valid,author: valid,0
+multi_turn_miss_func_94,miss_func,1,check_tire_pressure,valid,author: valid,0
+multi_turn_miss_func_97,miss_func,3,startEngine,valid,author: valid,0
+multi_turn_miss_func_98,miss_func,1,pressBrakePedal,valid,author: valid,0
+multi_turn_miss_func_99,miss_func,0,fillFuelTank,valid,author: valid,0
+multi_turn_miss_func_101,miss_func,1,send_message,valid,author: valid,0
+multi_turn_miss_func_102,miss_func,2,cancel_order,valid,author: valid,0
+multi_turn_miss_func_105,miss_func,1,get_available_stocks,valid,author: valid,0
+multi_turn_miss_func_111,miss_func,0,add_to_watchlist,valid,author: valid,0
+multi_turn_miss_func_115,miss_func,1,add_to_watchlist,valid,author: valid,0
+multi_turn_miss_func_117,miss_func,0,remove_stock_from_watchlist,valid,author: valid,0
+multi_turn_miss_func_121,miss_func,1,place_order,valid,author: valid,0
+multi_turn_miss_func_122,miss_func,0,place_order,valid,author: valid,0
+multi_turn_miss_func_123,miss_func,0,place_order,valid,author: valid,0
+multi_turn_miss_func_124,miss_func,2,cancel_order,valid,author: valid,0
+multi_turn_miss_func_130,miss_func,2,cancel_order,valid,author: valid,0
+multi_turn_miss_func_132,miss_func,0,add_to_watchlist,valid,author: valid,0
+multi_turn_miss_func_134,miss_func,1,cancel_order,valid,author: valid,0
+multi_turn_miss_func_136,miss_func,0,place_order,valid,author: valid,0
+multi_turn_miss_func_137,miss_func,0,add_to_watchlist,valid,author: valid,0
+multi_turn_miss_func_138,miss_func,1,place_order,valid,author: valid,0
+multi_turn_miss_func_139,miss_func,0,add_to_watchlist,valid,author: valid,0
+multi_turn_miss_func_141,miss_func,0,remove_stock_from_watchlist,valid,author: valid,0
+multi_turn_miss_func_142,miss_func,0,add_to_watchlist,valid,author: valid,0
+multi_turn_miss_func_146,miss_func,2,place_order,valid,author: valid,0
+multi_turn_miss_func_147,miss_func,0,post_tweet,valid,author: valid,0
+multi_turn_miss_func_149,miss_func,2,send_message,valid,author: valid,0
+multi_turn_miss_func_150,miss_func,1,set_budget_limit,valid,author: valid,0
+multi_turn_miss_func_151,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_152,miss_func,2,ticket_login,valid,author: valid,0
+multi_turn_miss_func_155,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_158,miss_func,1,book_flight,valid,author: valid,0
+multi_turn_miss_func_159,miss_func,1,book_flight,valid,author: valid,0
+multi_turn_miss_func_160,miss_func,1,book_flight,valid,author: valid,0
+multi_turn_miss_func_163,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_164,miss_func,2,book_flight,valid,author: valid,0
+multi_turn_miss_func_168,miss_func,1,book_flight,valid,author: valid,0
+multi_turn_miss_func_169,miss_func,0,retrieve_invoice,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_170,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_171,miss_func,0,book_flight,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_173,miss_func,1,compute_exchange_rate,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_174,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_175,miss_func,1,authenticate_twitter,valid,author: valid,0
+multi_turn_miss_func_176,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_177,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_181,miss_func,2,book_flight,valid,author: valid,0
+multi_turn_miss_func_183,miss_func,5,authenticate_twitter,valid,author: valid,0
+multi_turn_miss_func_184,miss_func,0,get_flight_cost,valid,author: valid,0
+multi_turn_miss_func_185,miss_func,0,get_flight_cost,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_187,miss_func,0,purchase_insurance,valid,author: valid,0
+multi_turn_miss_func_188,miss_func,1,set_budget_limit,valid,author: valid,0
+multi_turn_miss_func_189,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_191,miss_func,3,book_flight,valid,author: valid,0
+multi_turn_miss_func_192,miss_func,3,book_flight,valid,author: valid,0
+multi_turn_miss_func_193,miss_func,2,cancel_booking,valid,author: valid,0
+multi_turn_miss_func_195,miss_func,0,book_flight,valid,author: valid,0
+multi_turn_miss_func_196,miss_func,3,create_ticket,valid,author: valid,0
+multi_turn_miss_func_198,miss_func,0,book_flight,compound,author: compound; independent steps listed,0
+multi_turn_miss_func_199,miss_func,3,send_message,valid,"the only step besides the withheld send_message is a login, which is not counted as world-changing",1
+multi_turn_miss_param_0,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_2,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_3,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_5,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_15,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_16,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_17,miss_param,2,,compound,author: compound; independent steps listed,0
+multi_turn_miss_param_23,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_27,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_29,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_34,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_38,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_39,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_40,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_41,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_42,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_44,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_45,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_46,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_48,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_50,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_51,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_53,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_54,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_55,miss_param,0,,compound,author: compound; independent steps listed,0
+multi_turn_miss_param_62,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_65,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_66,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_69,miss_param,1,,compound,author: compound; independent steps listed,0
+multi_turn_miss_param_70,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_72,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_73,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_74,miss_param,1,,compound,author: compound; independent steps listed,0
+multi_turn_miss_param_75,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_76,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_79,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_82,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_83,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_84,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_86,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_88,miss_param,2,,construction,withheld origin 'SF' is stated in the turn's own tweet text,0
+multi_turn_miss_param_89,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_90,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_91,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_93,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_94,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_95,miss_param,3,,construction,"withheld value is the sender's own id; current_user is already USR005, receiver in the contact list, reference call does not use it",1
+multi_turn_miss_param_97,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_99,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_101,miss_param,1,,construction,withheld value is the sender's own id; current_user is already USR001 and the reference call does not use it,1
+multi_turn_miss_param_102,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_103,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_104,miss_param,1,,construction,withheld value is named earlier in the dialogue,0
+multi_turn_miss_param_105,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_106,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_107,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_108,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_109,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_110,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_111,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_114,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_115,miss_param,1,,construction,withheld value is stated earlier in the dialogue,0
+multi_turn_miss_param_117,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_120,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_122,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_123,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_124,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_126,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_128,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_129,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_130,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_131,miss_param,5,,valid,author: valid,0
+multi_turn_miss_param_132,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_133,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_134,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_135,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_136,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_137,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_141,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_142,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_146,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_147,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_148,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_149,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_150,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_151,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_152,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_155,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_156,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_159,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_160,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_166,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_169,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_170,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_171,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_174,miss_param,4,,valid,author: valid,0
+multi_turn_miss_param_175,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_176,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_177,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_181,miss_param,4,,valid,author: valid,0
+multi_turn_miss_param_182,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_183,miss_param,5,,valid,author: valid,0
+multi_turn_miss_param_184,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_185,miss_param,1,,construction,withheld access code is stated earlier in the dialogue,0
+multi_turn_miss_param_186,miss_param,5,,valid,author: valid,0
+multi_turn_miss_param_188,miss_param,1,,valid,author: valid,0
+multi_turn_miss_param_189,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_190,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_191,miss_param,3,,valid,author: valid,0
+multi_turn_miss_param_193,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_194,miss_param,2,,valid,author: valid,0
+multi_turn_miss_param_196,miss_param,4,,valid,author: valid,0
+multi_turn_miss_param_198,miss_param,0,,valid,author: valid,0
+multi_turn_miss_param_199,miss_param,0,,construction,missing-side turn is character-identical to the complete turn; card id and token are both stated,1

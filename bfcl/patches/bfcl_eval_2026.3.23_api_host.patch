@@ -1,0 +1,411 @@
+Edits to bfcl-eval 2026.3.23 on the host that called the API models. Used for gpt-5.4,
+deepseek-v4-flash, Qwen3.8-Max and the gpt-5.4 pro-action arm.
+Apply inside site-packages with: patch -p1 < bfcl_eval_2026.3.23_api_host.patch
+
+--- upstream/bfcl_eval/constants/model_config.py
++++ patched/bfcl_eval/constants/model_config.py
+@@ -165,6 +165,42 @@
+         is_fc_model=False,
+         underscore_to_dot=False,
+     ),
++    "deepseek-v4-pro-FC": ModelConfig(
++        model_name="deepseek-v4-pro",
++        display_name="DeepSeek-V4-Pro (FC)",
++        url="https://api-docs.deepseek.com",
++        org="DeepSeek",
++        license="MIT",
++        model_handler=DeepSeekAPIHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
++    "deepseek-v4-pro-FC-nothink": ModelConfig(
++        model_name="deepseek-v4-pro",
++        display_name="DeepSeek-V4-Pro no-think (FC)",
++        url="https://api-docs.deepseek.com",
++        org="DeepSeek",
++        license="MIT",
++        model_handler=DeepSeekAPIHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
++    "deepseek-v4-flash-FC": ModelConfig(
++        model_name="deepseek-v4-flash",
++        display_name="DeepSeek-V4-Flash (FC)",
++        url="https://api-docs.deepseek.com",
++        org="DeepSeek",
++        license="MIT",
++        model_handler=DeepSeekAPIHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
+     "gpt-5.2-2025-12-11-FC": ModelConfig(
+         model_name="gpt-5.2-2025-12-11",
+         display_name="GPT-5.2-2025-12-11 (FC)",
+@@ -177,6 +213,18 @@
+         is_fc_model=True,
+         underscore_to_dot=True,
+     ),
++    "gpt-5.4-FC": ModelConfig(
++        model_name="gpt-5.4",
++        display_name="GPT-5.4 (FC)",
++        url="https://openai.com/api/pricing/",
++        org="OpenAI",
++        license="Proprietary",
++        model_handler=OpenAIResponsesHandler,
++        input_price=2.5,
++        output_price=15,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
+     "gpt-5.2-2025-12-11": ModelConfig(
+         model_name="gpt-5.2-2025-12-11",
+         display_name="GPT-5.2-2025-12-11 (Prompt)",
+@@ -1065,6 +1113,22 @@
+         is_fc_model=False,
+         underscore_to_dot=False,
+     ),
++    # --- added 2026-09-16 for the paired-decision study ------------------------
++    # Dated snapshot only, so that a rerun calls the same model as the
++    # rollouts it is compared with.
++    "qwen3.8-max-0902-FC": ModelConfig(
++        model_name="qwen3.8-max-0902",
++        display_name="Qwen3.8-Max-0902 (FC)",
++        url="https://help.aliyun.com/zh/model-studio/models",
++        org="Qwen",
++        license="Proprietary",
++        model_handler=QwenAPIHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=True,
++        underscore_to_dot=False,
++    ),
++    # ---------------------------------------------------------------------------
+     "qwq-32b-FC": ModelConfig(
+         model_name="qwq-32b",
+         display_name="QwQ-32B (FC)",
+@@ -1213,6 +1277,78 @@
+ 
+ # Inference through local hosting
+ local_inference_model_map = {
++    "Qwen3.5-9B-FC": ModelConfig(
++        model_name="Qwen3.5-9B",
++        display_name="Qwen3.5-9B (FC)",
++        url="https://huggingface.co/Qwen/Qwen3.5-9B",
++        org="Qwen",
++        license="apache-2.0",
++        model_handler=QwenFCHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=True,
++        underscore_to_dot=False,
++    ),
++    "Qwen3.5-9B-FC-nothink": ModelConfig(
++        model_name="Qwen3.5-9B",
++        display_name="Qwen3.5-9B (FC, no-think)",
++        url="https://huggingface.co/Qwen/Qwen3.5-9B",
++        org="Qwen",
++        license="apache-2.0",
++        model_handler=QwenFCHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=True,
++        underscore_to_dot=False,
++    ),
++    "gemma-4-E4B-it": ModelConfig(
++        model_name="gemma-4-E4B-it",
++        display_name="Gemma-4-E4B-it (Prompt)",
++        url="https://huggingface.co/google/gemma-4-E4B-it",
++        org="Google",
++        license="gemma-terms-of-use",
++        model_handler=GemmaHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=False,
++        underscore_to_dot=False,
++    ),
++    "gemma-4-E4B-it-think": ModelConfig(
++        model_name="gemma-4-E4B-it",
++        display_name="Gemma-4-E4B-it (Prompt, think)",
++        url="https://huggingface.co/google/gemma-4-E4B-it",
++        org="Google",
++        license="gemma-terms-of-use",
++        model_handler=GemmaHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=False,
++        underscore_to_dot=False,
++    ),
++    "gemma-4-31B-it": ModelConfig(
++        model_name="gemma-4-31B-it",
++        display_name="Gemma-4-31B-it (Prompt)",
++        url="https://huggingface.co/google/gemma-4-31B-it",
++        org="Google",
++        license="gemma-terms-of-use",
++        model_handler=GemmaHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=False,
++        underscore_to_dot=False,
++    ),
++    "gemma-4-31B-it-think": ModelConfig(
++        model_name="gemma-4-31B-it",
++        display_name="Gemma-4-31B-it (Prompt, think)",
++        url="https://huggingface.co/google/gemma-4-31B-it",
++        org="Google",
++        license="gemma-terms-of-use",
++        model_handler=GemmaHandler,
++        input_price=None,
++        output_price=None,
++        is_fc_model=False,
++        underscore_to_dot=False,
++    ),
+     "deepseek-ai/DeepSeek-R1": ModelConfig(
+         model_name="deepseek-ai/DeepSeek-R1",
+         display_name="DeepSeek-R1 (Prompt) (Local)",
+--- upstream/bfcl_eval/constants/eval_config.py
++++ patched/bfcl_eval/constants/eval_config.py
+@@ -22,7 +22,7 @@
+ RESULT_PATH = PROJECT_ROOT / "result"
+ SCORE_PATH = PROJECT_ROOT / "score"
+ DOTENV_PATH = PROJECT_ROOT / ".env"
+-TEST_IDS_TO_GENERATE_PATH = PROJECT_ROOT / "test_case_ids_to_generate.json"
++TEST_IDS_TO_GENERATE_PATH = PROJECT_ROOT / os.getenv("BFCL_RUN_IDS_FILE", "test_case_ids_to_generate.json")
+ # Directory that stores all lock files (kept out of the results tree)
+ LOCK_DIR = PROJECT_ROOT / ".file_locks"
+ 
+--- upstream/bfcl_eval/model_handler/api_inference/deepseek.py
++++ patched/bfcl_eval/model_handler/api_inference/deepseek.py
+@@ -57,18 +57,31 @@
+         tools = inference_data["tools"]
+         inference_data["inference_input_log"] = {"message": repr(message), "tools": tools}
+ 
++        # thinking-OFF control for v4-pro: the only mechanism that works on the
++        # deepseek-v4-pro model id is extra_body={"thinking":{"type":"disabled"}}
++        # (the `thinking`/`reasoning_effort`/`enable_thinking` kwargs all 400).
++        # Toggled by env so the same model_name serves both the think and no-think
++        # registry entries (fair crossover control, same weights/id).
++        extra = (
++            {"extra_body": {"thinking": {"type": "disabled"}}}
++            if os.getenv("DEEPSEEK_NO_THINK") == "1"
++            else {}
++        )
++
+         if len(tools) > 0:
+             return self.generate_with_backoff(
+                 model=self.model_name,
+                 messages=message,
+                 tools=tools,
+                 temperature=self.temperature,
++                **extra,
+             )
+         else:
+             return self.generate_with_backoff(
+                 model=self.model_name,
+                 messages=message,
+                 temperature=self.temperature,
++                **extra,
+             )
+ 
+     @override
+@@ -125,4 +138,13 @@
+         """
+         response_data = super()._parse_query_response_FC(api_response)
+         self._add_reasoning_content_if_available_FC(api_response, response_data)
++        # V4 thinking mode REQUIRES reasoning_content be echoed back in the
++        # assistant turn of the next request (the opposite of V3.2, which
++        # rejects it). The base helper strips it for chat history, so re-inject
++        # it into the assistant message dict for V4.
++        if self.model_name.startswith("deepseek-v4"):
++            rc = response_data.get("reasoning_content")
++            msg = response_data.get("model_responses_message_for_chat_history")
++            if rc and isinstance(msg, dict):
++                msg["reasoning_content"] = rc
+         return response_data
+--- upstream/bfcl_eval/model_handler/api_inference/openai_response.py
++++ patched/bfcl_eval/model_handler/api_inference/openai_response.py
+@@ -131,6 +131,13 @@
+ 
+         inference_data["message"] = []
+ 
++        # Prompt-injection arms (env-gated; neutral runs unaffected).
++        # FC mode has no system prompt at all, so the nudge becomes the sole
++        # developer-role message (OpenAI's replacement for system role).
++        _extra = os.getenv("BFCL_EXTRA_SYSTEM_PROMPT", "").strip()
++        if _extra:
++            inference_data["message"].append({"role": "developer", "content": _extra})
++
+         return inference_data
+ 
+     def _compile_tools(self, inference_data: dict, test_entry: dict) -> dict:
+--- upstream/bfcl_eval/model_handler/local_inference/gemma.py
++++ patched/bfcl_eval/model_handler/local_inference/gemma.py
+@@ -1,6 +1,11 @@
++import os
++import re
++
+ from bfcl_eval.model_handler.local_inference.base_oss_handler import OSSHandler
+ from bfcl_eval.model_handler.utils import (
+     combine_consecutive_user_prompts,
++    default_decode_ast_prompting,
++    default_decode_execute_prompting,
+     system_prompt_pre_processing_chat_model,
+ )
+ from overrides import override
+@@ -20,24 +25,41 @@
+ 
+     @override
+     def _format_prompt(self, messages, function):
++        """gemma-4 prompt format (PATCH — fairness-critical).
++
++        gemma-4 ships a NEW token scheme: turns are <|turn>role ... <turn|>
++        (ids 105/106; <turn|>=106 is the real eos), tool results use
++        <|tool_response> ... <tool_response|> (id 50, also eos), and thinking is
++        opened with <|think|> (id 98). The stock handler emitted gemma-2/3's
++        <start_of_turn>/<end_of_turn>, which are NOT tokens in gemma-4 at all —
++        every delimiter became gibberish sub-words and the model never hit a real
++        eos (free-run). This rewrites to the gemma-4 scheme; set GEMMA_THINK=1 to
++        enable reasoning (injects <|think|> at the top of the system turn, matching
++        the official chat_template's enable_thinking path).
+         """
+-        "bos_token": "<bos>",
+-        "chat_template": "{{ bos_token }}\n{%- if messages[0]['role'] == 'system' -%}\n    {%- if messages[0]['content'] is string -%}\n        {%- set first_user_prefix = messages[0]['content'] + '\n\n' -%}\n    {%- else -%}\n        {%- set first_user_prefix = messages[0]['content'][0]['text'] + '\n\n' -%}\n    {%- endif -%}\n    {%- set loop_messages = messages[1:] -%}\n{%- else -%}\n    {%- set first_user_prefix = \"\" -%}\n    {%- set loop_messages = messages -%}\n{%- endif -%}\n{%- for message in loop_messages -%}\n    {%- if (message['role'] == 'user') != (loop.index0 % 2 == 0) -%}\n        {{ raise_exception(\"Conversation roles must alternate user/assistant/user/assistant/...\") }}\n    {%- endif -%}\n    {%- if (message['role'] == 'assistant') -%}\n        {%- set role = \"model\" -%}\n    {%- else -%}\n        {%- set role = message['role'] -%}\n    {%- endif -%}\n    {{ '<start_of_turn>' + role + '\n' + (first_user_prefix if loop.first else \"\") }}\n    {%- if message['content'] is string -%}\n        {{ message['content'] | trim }}\n    {%- elif message['content'] is iterable -%}\n        {%- for item in message['content'] -%}\n            {%- if item['type'] == 'image' -%}\n                {{ '<start_of_image>' }}\n            {%- elif item['type'] == 'text' -%}\n                {{ item['text'] | trim }}\n            {%- endif -%}\n        {%- endfor -%}\n    {%- else -%}\n        {{ raise_exception(\"Invalid content type\") }}\n    {%- endif -%}\n    {{ '<end_of_turn>\n' }}\n{%- endfor -%}\n{%- if add_generation_prompt -%}\n    {{'<start_of_turn>model\n'}}\n{%- endif -%}\n",
+-        """
++        think = os.getenv("GEMMA_THINK") == "1"
+         formatted_prompt = "<bos>"
+ 
+-        if messages[0]["role"] == "system":
+-            first_user_prefix = messages[0]["content"].strip() + "\n\n"
++        if messages and messages[0]["role"] == "system":
++            sys_content = messages[0]["content"].strip()
++            formatted_prompt += "<|turn>system\n"
++            if think:
++                formatted_prompt += "<|think|>\n"
++            formatted_prompt += sys_content + "<turn|>\n"
+             messages = messages[1:]
+-        else:
+-            first_user_prefix = ""
++        elif think:
++            formatted_prompt += "<|turn>system\n<|think|>\n<turn|>\n"
+ 
+-        is_first = True
+         for message in messages:
+-            formatted_prompt += f"<start_of_turn>{message['role']}\n{first_user_prefix if is_first else ''}{message['content'].strip()}<end_of_turn>\n"
+-            is_first = False
++            role = "model" if message["role"] in ("assistant", "model") else message["role"]
++            content = message["content"].strip()
++            if role == "tool":
++                # native tool-result channel; the model is trained to read it back
++                formatted_prompt += f"<|tool_response>\n{content}\n<tool_response|>\n"
++            else:
++                formatted_prompt += f"<|turn>{role}\n{content}<turn|>\n"
+ 
+-        formatted_prompt += f"<start_of_turn>model\n"
++        formatted_prompt += "<|turn>model\n"
+ 
+         return formatted_prompt
+ 
+@@ -67,3 +89,78 @@
+                 prompt["role"] = "model"
+ 
+         return prompts
++
++    # ---- gemma-specific decode (PATCH) ----
++    # gemma-4 emits one call-list per line, e.g. "[pwd()]\n[ls(a=True)]", and
++    # often a trailing <end_of_turn>. The default decoder runs ast.parse(mode=eval)
++    # which only accepts a SINGLE expression -> multi-line output raises SyntaxError
++    # and the whole step is silently dropped (68% call loss / 23/50 empty turns).
++    # We strip gemma tokens, split into top-level [...] groups (string- and
++    # nesting-aware, so echo("a[1]") and mean(numbers=[3,16,60]) survive), then
++    # parse each group with the stock decoder and concatenate.
++    @staticmethod
++    def _gemma_clean(text: str) -> str:
++        # drop the reasoning channel entirely (<|channel>thought ... <channel|>)
++        # so thinking text never reaches the tool-call parser
++        text = re.sub(r"<\|channel>.*?<channel\|>", "", text, flags=re.DOTALL)
++        for tok in (
++            "<|turn>", "<turn|>", "<|think|>", "<|channel>", "<channel|>",
++            "<|tool_response>", "<tool_response|>", "<|tool_call>",
++            "<end_of_turn>", "<start_of_turn>", "<eos>", "<bos>",
++        ):
++            text = text.replace(tok, "")
++        return text.strip().strip("`").strip()
++
++    @staticmethod
++    def _split_bracket_groups(s: str) -> list[str]:
++        # Only track string literals INSIDE a bracket group (depth>0). At depth 0
++        # we are scanning reasoning prose, whose apostrophes (hasn't / it's / I'll)
++        # must NOT be treated as string delimiters: an odd apostrophe count would
++        # leave in_str "open" when the trailing [call()] arrives, swallowing it
++        # (gemma-4 think false-empty-turn — bites verbose 31B reasoning hardest).
++        groups, depth, start, in_str = [], 0, None, None
++        for i, ch in enumerate(s):
++            if in_str is not None:
++                if ch == in_str and s[i - 1] != "\\":
++                    in_str = None
++                continue
++            if depth > 0 and ch in ("'", '"'):
++                in_str = ch
++            elif ch == "[":
++                if depth == 0:
++                    start = i
++                depth += 1
++            elif ch == "]" and depth > 0:
++                depth -= 1
++                if depth == 0 and start is not None:
++                    groups.append(s[start : i + 1])
++                    start = None
++        return groups
++
++    @override
++    def decode_ast(self, result, language, has_tool_call_tag):
++        cleaned = self._gemma_clean(result)
++        groups = self._split_bracket_groups(cleaned)
++        if not groups:
++            return default_decode_ast_prompting(result, language, has_tool_call_tag)
++        out = []
++        for g in groups:
++            try:
++                out.extend(default_decode_ast_prompting(g, language, has_tool_call_tag))
++            except Exception:
++                continue
++        return out
++
++    @override
++    def decode_execute(self, result, has_tool_call_tag=False):
++        cleaned = self._gemma_clean(result)
++        groups = self._split_bracket_groups(cleaned)
++        if not groups:
++            return default_decode_execute_prompting(result, has_tool_call_tag)
++        out = []
++        for g in groups:
++            try:
++                out.extend(default_decode_execute_prompting(g, has_tool_call_tag))
++            except Exception:
++                continue
++        return out
+--- upstream/bfcl_eval/model_handler/local_inference/qwen_fc.py
++++ patched/bfcl_eval/model_handler/local_inference/qwen_fc.py
+@@ -1,4 +1,5 @@
+ import json
++import os
+ import re
+ from typing import Any
+ 
+@@ -236,6 +237,11 @@
+                     formatted_prompt += "<|im_end|>\n"
+ 
+         formatted_prompt += "<|im_start|>assistant\n"
++        # Qwen3.5 thinks by default. Setting QWEN_NO_THINK=1 injects an empty
++        # <think></think> block so the model skips reasoning (matches the
++        # enable_thinking=False path of the official chat template).
++        if os.getenv("QWEN_NO_THINK") == "1":
++            formatted_prompt += "<think>\n\n</think>\n\n"
+         return formatted_prompt
+ 
+     @override

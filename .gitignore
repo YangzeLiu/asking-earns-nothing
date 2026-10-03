@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Benchmark install and rollout trees (not shipped; see README, "Data not included")
+bfcl/venv/
+bfcl/rollouts_extra/
+bfcl/newmodels/
+bfcl/phase5_results/
+/result/
+/score/
+
+# Build products and script outputs
+release_pairs/
+outputs/
+bfcl/traces/
+analysis/phase4_badkey_*.md
+analysis/p1d_nonact_rate.md
+analysis/p1f_matched_control.md
+analysis/p1g_paired_decision.md
+analysis/p1h_pair_checks.md
+analysis/p1i_holdback_content.md
+analysis/p1n_workaround.md
+
+# OS and editor files
+.DS_Store
+*.swp

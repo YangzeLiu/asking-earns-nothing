@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper as below."
+type: software
+title: "Asking Earns Nothing: Scoring the Decision to Act in BFCL Multi-Turn"
+authors:
+  - family-names: Liu
+    given-names: Yangze
+    affiliation: Shandong University
+  - family-names: Han
+    given-names: Zhongyi
+    affiliation: Shandong University
+license: Apache-2.0
+repository-code: "https://github.com/YangzeLiu/asking-earns-nothing"
+keywords:
+  - tool use
+  - agent evaluation
+  - BFCL
+  - clarification
+preferred-citation:
+  type: generic
+  title: "Asking Earns Nothing: Scoring the Decision to Act in BFCL Multi-Turn"
+  authors:
+    - family-names: Liu
+      given-names: Yangze
+      affiliation: Shandong University
+    - family-names: Han
+      given-names: Zhongyi
+      affiliation: Shandong University
+  year: 2026
+  status: preprint
+  notes: "arXiv preprint, identifier to be added"

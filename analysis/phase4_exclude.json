@@ -1,0 +1,62 @@
+{
+ "_meta": {
+  "purpose": "Phase 4 answer-key-wrong (BAD_KEY) exclude list, adjudicated by the authors. Drop these from N before computing appropriate-action acc / A2 penalty / rank reversal in Phase 3.",
+  "approved_by": "the authors",
+  "approved_date": "2026-06-09",
+  "method": "mechanical prefilter (151 candidates), then manual review by the authors against the simulator source",
+  "total_excluded": 31,
+  "kept_not_excluded": [
+   "multi_turn_base_196",
+   "multi_turn_miss_param_29"
+  ],
+  "note": "Categories are variants of shared base scenarios; the same GOLD bug recurs across categories by scenario id (e.g. scenario_4 bad in all 4 categories). 28/32/176 carry a long_context-padding caveat but excluded under the authors' uncertain-drop policy (uncertain -> drop, no loss).",
+  "amended_2026_06_11": "+4 from the authors' rulings in the inter-annotator agreement pilot (not BAD_KEY but task-defect): long_context_26 vague referent 'last file displayed'; long_context_27 contradictory prompt/unverifiable evidence; miss_func_83 + miss_param_195 perturbation no-op (abstracted info still present in turn0 -> model finishes early, punished for empty turn)."
+ },
+ "exclude": {
+  "base": [
+   "multi_turn_base_4",
+   "multi_turn_base_30",
+   "multi_turn_base_176",
+   "multi_turn_base_178",
+   "multi_turn_base_187"
+  ],
+  "long_context": [
+   "multi_turn_long_context_4",
+   "multi_turn_long_context_11",
+   "multi_turn_long_context_18",
+   "multi_turn_long_context_28",
+   "multi_turn_long_context_32",
+   "multi_turn_long_context_41",
+   "multi_turn_long_context_43",
+   "multi_turn_long_context_144",
+   "multi_turn_long_context_172",
+   "multi_turn_long_context_197",
+   "multi_turn_long_context_26",
+   "multi_turn_long_context_27"
+  ],
+  "miss_func": [
+   "multi_turn_miss_func_4",
+   "multi_turn_miss_func_15",
+   "multi_turn_miss_func_30",
+   "multi_turn_miss_func_133",
+   "multi_turn_miss_func_172",
+   "multi_turn_miss_func_197",
+   "multi_turn_miss_func_83"
+  ],
+  "miss_param": [
+   "multi_turn_miss_param_4",
+   "multi_turn_miss_param_30",
+   "multi_turn_miss_param_172",
+   "multi_turn_miss_param_178",
+   "multi_turn_miss_param_187",
+   "multi_turn_miss_param_197",
+   "multi_turn_miss_param_195"
+  ]
+ },
+ "count_by_category": {
+  "base": 5,
+  "long_context": 10,
+  "miss_func": 6,
+  "miss_param": 6
+ }
+}

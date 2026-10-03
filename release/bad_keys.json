@@ -1,0 +1,245 @@
+{
+ "_meta": {
+  "purpose": "Human-adjudicated bad keys for BFCL v4 multi-turn. Drop these ids from N before computing appropriate-action accuracy, the A2 penalty, or any rank statistic.",
+  "total": 31,
+  "source": "copied verbatim from the sealed exclusion list (phase4_exclude.json, 31 ids, approved 2026-06-09 + 4 amendments 2026-06-11); reasons transcribed from the authors' review notes and the amendment note in that list",
+  "method": "mechanical prefilter (151 candidates), then manual review by the authors against the simulator source.",
+  "kept_not_excluded": [
+   "multi_turn_base_196",
+   "multi_turn_miss_param_29"
+  ],
+  "kept_rationale": "base_196: GOLD omits priority and takes the function default, which is the reasonable reading of a user request that never mentions priority. miss_param_29: GOLD paraphrases the user's previous message where models wrote it verbatim - an alternative-path (A2) case, not an objective key error.",
+  "caveat": "long_context 28 / 32 and base 176 carry an unresolved padding caveat and were excluded under the authors' uncertain-drop policy, not as proven key errors. Sensitivity to the whole list is reported (no-exclude, N=200).",
+  "families": {
+   "A": "objective GOLD error or GOLD contradicting/fabricating relative to the user request",
+   "B": "disputed GOLD constant or invented argument, excluded under the uncertain-drop policy",
+   "D": "task defect / no-op perturbation found during the inter-annotator agreement pilot"
+  },
+  "note": "Categories are variants of shared base scenarios, so one scenario ruling applies to every category in which that scenario appears (e.g. scenario 4 is bad in all four)."
+ },
+ "count_by_category": {
+  "base": 5,
+  "long_context": 10,
+  "miss_func": 6,
+  "miss_param": 6
+ },
+ "bad_keys": [
+  {
+   "id": "multi_turn_base_4",
+   "category": "base",
+   "scenario_index": 4,
+   "family": "A. objective GOLD error (disputed sub-case)",
+   "reason": "Task asks to sort the report file's lines before tweeting; GOLD tweet text is a word-level reshuffle that no real sort can produce (report.txt reads as a single line in the simulator, so sort is a no-op). Single-line assumption not byte-verified, excluded under the uncertain-drop policy."
+  },
+  {
+   "id": "multi_turn_base_30",
+   "category": "base",
+   "scenario_index": 30,
+   "family": "A. GOLD alters content the user asked to send verbatim",
+   "reason": "User asks to tweet the file content 'exactly as it is'; the file contains JSON quotes but GOLD's post_tweet content has every quote stripped, contradicting 'exactly'."
+  },
+  {
+   "id": "multi_turn_base_176",
+   "category": "base",
+   "scenario_index": 176,
+   "family": "B. GOLD text contradicts the user",
+   "reason": "User states the trip is on December 15, 2026; GOLD's ticket description says December 15, 2023, so a faithful model writing 2026 mismatches on the description string."
+  },
+  {
+   "id": "multi_turn_base_178",
+   "category": "base",
+   "scenario_index": 178,
+   "family": "B. GOLD invents an unrequested argument",
+   "reason": "User asks to draft a complaint titled 'Unsatisfactory Customer Support' and never mentions priority; GOLD hardcodes priority=4 and an empty description. Adjudicated together with scenario 187 as the 'invented priority' family."
+  },
+  {
+   "id": "multi_turn_base_187",
+   "category": "base",
+   "scenario_index": 187,
+   "family": "A. GOLD contradicts an explicit user requirement",
+   "reason": "User asks for a 'high-priority' ticket and the simulator's priority scale is 1-5 with 5 highest; GOLD writes priority=4, so a model that correctly writes 5 is failed."
+  },
+  {
+   "id": "multi_turn_long_context_4",
+   "category": "long_context",
+   "scenario_index": 4,
+   "family": "A. objective GOLD error (disputed sub-case)",
+   "reason": "Task asks to sort the report file's lines before tweeting; GOLD tweet text is a word-level reshuffle that no real sort can produce (report.txt reads as a single line in the simulator, so sort is a no-op). Single-line assumption not byte-verified, excluded under the uncertain-drop policy."
+  },
+  {
+   "id": "multi_turn_long_context_11",
+   "category": "long_context",
+   "scenario_index": 11,
+   "family": "A. GOLD fabricates content",
+   "reason": "User asks to tweet the filenames shown by the terminal in /temp (only file1.txt, file2.txt); GOLD adds ~12 nonexistent hash-named image files that no correct ls can produce."
+  },
+  {
+   "id": "multi_turn_long_context_18",
+   "category": "long_context",
+   "scenario_index": 18,
+   "family": "A. GOLD fabricates content",
+   "reason": "User asks to tweet the diff of two short history files; GOLD's tweet body appends a 6000+ word financial report that appears nowhere in either file."
+  },
+  {
+   "id": "multi_turn_long_context_26",
+   "category": "long_context",
+   "scenario_index": 26,
+   "family": "D. task defect (added 2026-06-11 in the inter-annotator agreement pilot)",
+   "reason": "Vague referent: the prompt says 'last file displayed' with no unambiguous resolution. Not BAD_KEY but a task defect."
+  },
+  {
+   "id": "multi_turn_long_context_27",
+   "category": "long_context",
+   "scenario_index": 27,
+   "family": "D. task defect (added 2026-06-11 in the inter-annotator agreement pilot)",
+   "reason": "Contradictory prompt with unverifiable evidence. Not BAD_KEY but a task defect."
+  },
+  {
+   "id": "multi_turn_long_context_28",
+   "category": "long_context",
+   "scenario_index": 28,
+   "family": "B. disputed GOLD constant",
+   "reason": "Task writes the directory's disk usage as 'number bytes'; GOLD hardcodes '6755 bytes' while the simulator gives ~205. long_context padding could plausibly make 6755 correct, so the ruling was never settled; excluded under the uncertain-drop policy."
+  },
+  {
+   "id": "multi_turn_long_context_32",
+   "category": "long_context",
+   "scenario_index": 32,
+   "family": "B. disputed GOLD constant",
+   "reason": "Task takes log_6 of the character count of 'Spring2023Draft'; GOLD uses value=3287.0 while the simulator gives 36. long_context padding could plausibly make 3287 correct; not settled, excluded under the uncertain-drop policy."
+  },
+  {
+   "id": "multi_turn_long_context_41",
+   "category": "long_context",
+   "scenario_index": 41,
+   "family": "A. GOLD fabricates content",
+   "reason": "User asks to forward note content to Bob (USR002) verbatim; GOLD's message appends a ~3000 word financial-report template that is not in the file."
+  },
+  {
+   "id": "multi_turn_long_context_43",
+   "category": "long_context",
+   "scenario_index": 43,
+   "family": "A. GOLD fabricates content",
+   "reason": "User asks to forward annual-report content to Bob (USR002) verbatim; GOLD's message appends a ~3000 word template that is not in the file."
+  },
+  {
+   "id": "multi_turn_long_context_144",
+   "category": "long_context",
+   "scenario_index": 144,
+   "family": "A. GOLD uses constants from the wrong scenario branch",
+   "reason": "Task averages AAPL price/volume/MA5/MA20; GOLD's mean() uses the base-scenario MA5/MA20 scalars, but in the long_context branch get_stock_info overwrites them with 200+ element lists, so those scalars are not visible to the model."
+  },
+  {
+   "id": "multi_turn_long_context_172",
+   "category": "long_context",
+   "scenario_index": 172,
+   "family": "A. objective GOLD error (off-by-one year)",
+   "reason": "User states the card expires 08/2026; GOLD calls register_credit_card(expiration_date='08/2025'). Stored verbatim with no normalisation, so a faithful model can never match."
+  },
+  {
+   "id": "multi_turn_long_context_197",
+   "category": "long_context",
+   "scenario_index": 197,
+   "family": "A. objective GOLD error (year error)",
+   "reason": "User states the card expiration date is 12/26 (= 2026); GOLD calls register_credit_card(expiration_date='12/2025')."
+  },
+  {
+   "id": "multi_turn_miss_func_4",
+   "category": "miss_func",
+   "scenario_index": 4,
+   "family": "A. objective GOLD error (disputed sub-case)",
+   "reason": "Task asks to sort the report file's lines before tweeting; GOLD tweet text is a word-level reshuffle that no real sort can produce (report.txt reads as a single line in the simulator, so sort is a no-op). Single-line assumption not byte-verified, excluded under the uncertain-drop policy."
+  },
+  {
+   "id": "multi_turn_miss_func_15",
+   "category": "miss_func",
+   "scenario_index": 15,
+   "family": "A. objective GOLD error",
+   "reason": "Task averages a file's line/word/char counts; real char count is 60 (wc -c) but GOLD calls mean(numbers=[3,16,62]), so the correct answer is scored wrong."
+  },
+  {
+   "id": "multi_turn_miss_func_30",
+   "category": "miss_func",
+   "scenario_index": 30,
+   "family": "A. GOLD alters content the user asked to send verbatim",
+   "reason": "User asks to tweet the file content 'exactly as it is'; the file contains JSON quotes but GOLD's post_tweet content has every quote stripped, contradicting 'exactly'."
+  },
+  {
+   "id": "multi_turn_miss_func_83",
+   "category": "miss_func",
+   "scenario_index": 83,
+   "family": "D. perturbation no-op (added 2026-06-11 in the inter-annotator agreement pilot)",
+   "reason": "The missing-function perturbation is a no-op: the abstracted information is still present in turn 0, so the model finishes early and is then punished for an empty turn."
+  },
+  {
+   "id": "multi_turn_miss_func_133",
+   "category": "miss_func",
+   "scenario_index": 133,
+   "family": "A. GOLD contradicts the user request",
+   "reason": "User asks to add Gorilla's stock to the watchlist; GOLD calls add_to_watchlist(stock='AAPL'), which the user never mentioned and which the scenario's stock dictionary cannot yield."
+  },
+  {
+   "id": "multi_turn_miss_func_172",
+   "category": "miss_func",
+   "scenario_index": 172,
+   "family": "A. objective GOLD error (off-by-one year)",
+   "reason": "User states the card expires 08/2026; GOLD calls register_credit_card(expiration_date='08/2025'). Stored verbatim with no normalisation, so a faithful model can never match."
+  },
+  {
+   "id": "multi_turn_miss_func_197",
+   "category": "miss_func",
+   "scenario_index": 197,
+   "family": "A. objective GOLD error (year error)",
+   "reason": "User states the card expiration date is 12/26 (= 2026); GOLD calls register_credit_card(expiration_date='12/2025')."
+  },
+  {
+   "id": "multi_turn_miss_param_4",
+   "category": "miss_param",
+   "scenario_index": 4,
+   "family": "A. objective GOLD error (disputed sub-case)",
+   "reason": "Task asks to sort the report file's lines before tweeting; GOLD tweet text is a word-level reshuffle that no real sort can produce (report.txt reads as a single line in the simulator, so sort is a no-op). Single-line assumption not byte-verified, excluded under the uncertain-drop policy."
+  },
+  {
+   "id": "multi_turn_miss_param_30",
+   "category": "miss_param",
+   "scenario_index": 30,
+   "family": "A. GOLD alters content the user asked to send verbatim",
+   "reason": "User asks to tweet the file content 'exactly as it is'; the file contains JSON quotes but GOLD's post_tweet content has every quote stripped, contradicting 'exactly'."
+  },
+  {
+   "id": "multi_turn_miss_param_172",
+   "category": "miss_param",
+   "scenario_index": 172,
+   "family": "A. objective GOLD error (off-by-one year)",
+   "reason": "User states the card expires 08/2026; GOLD calls register_credit_card(expiration_date='08/2025'). Stored verbatim with no normalisation, so a faithful model can never match."
+  },
+  {
+   "id": "multi_turn_miss_param_178",
+   "category": "miss_param",
+   "scenario_index": 178,
+   "family": "B. GOLD invents an unrequested argument",
+   "reason": "User asks to draft a complaint titled 'Unsatisfactory Customer Support' and never mentions priority; GOLD hardcodes priority=4 and an empty description. Adjudicated together with scenario 187 as the 'invented priority' family."
+  },
+  {
+   "id": "multi_turn_miss_param_187",
+   "category": "miss_param",
+   "scenario_index": 187,
+   "family": "A. GOLD contradicts an explicit user requirement",
+   "reason": "User asks for a 'high-priority' ticket and the simulator's priority scale is 1-5 with 5 highest; GOLD writes priority=4, so a model that correctly writes 5 is failed."
+  },
+  {
+   "id": "multi_turn_miss_param_195",
+   "category": "miss_param",
+   "scenario_index": 195,
+   "family": "D. perturbation no-op (added 2026-06-11 in the inter-annotator agreement pilot)",
+   "reason": "The missing-parameter perturbation is a no-op: the abstracted information is still present in turn 0, so the model finishes early and is then punished for an empty turn."
+  },
+  {
+   "id": "multi_turn_miss_param_197",
+   "category": "miss_param",
+   "scenario_index": 197,
+   "family": "A. objective GOLD error (year error)",
+   "reason": "User states the card expiration date is 12/26 (= 2026); GOLD calls register_credit_card(expiration_date='12/2025')."
+  }
+ ]
+}

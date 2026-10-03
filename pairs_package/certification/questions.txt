@@ -1,0 +1,19 @@
+Anchor certification: the questions answered by hand on every candidate pair, reading the
+initial world state, the dialogue up to the anchor turn, the anchor turn in both versions,
+the scripted follow-up on the incomplete side, the tool list with the withheld function
+marked, and the reference calls. No model output was in view.
+
+Q1  Is the withheld value stated in, or logically entailed by, the dialogue? A value that is
+    merely discoverable in the environment, or guessable, does not count. (yes -> construction)
+Q2  Is the withheld value or function actually needed by the reference call on that turn?
+    (no -> construction)
+Q3  Does the incomplete turn also authorize a world-changing step that does not depend on
+    what was withheld, given the user's authorization and the simulator's preconditions?
+    (yes -> compound; the independent steps are listed in compound_split.json)
+Q4  Are the complete side's information and reference themselves adequate?
+    (no -> construction)
+
+Verdicts: valid, construction (leaves the scored set), compound (stays scored; the credited
+reading does not count an attempt confined to the independent steps). adjudication.csv gives
+the ruling and reason for every pair; revised=1 marks a first-pass ruling revised on a second
+reading, with the final reason recorded.

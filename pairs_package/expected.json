@@ -1,0 +1,1027 @@
+{
+ "definition": "C",
+ "models_order": [
+  "qwen3.8-max-0902-FC",
+  "gpt-5.4-FC",
+  "Qwen3.6-27B-FC",
+  "gemma-4-31B-it",
+  "deepseek-v4-flash-FC",
+  "Qwen3.5-9B-FC",
+  "gemma-4-E4B-it"
+ ],
+ "bootstrap": {
+  "B": 10000,
+  "seed": 20260612,
+  "resampled_unit": "the base twin each pair shares, not the pair",
+  "streams": "one fresh stream per model for the intervals, one shared resample for the rank-1 frequency"
+ },
+ "counts": {
+  "content_verified_pairs": 365,
+  "certified_pairs": 231,
+  "construction_errors": 8,
+  "compound_pairs": 27,
+  "certification_verdicts": {
+   "valid": 196,
+   "compound": 27,
+   "construction": 8
+  },
+  "scored_pairs": 223,
+  "excluded_pairs": 142,
+  "scored_pairs_login": 225,
+  "scored_miss_func": 116,
+  "scored_miss_param": 107,
+  "excluded_miss_func": 66,
+  "excluded_miss_param": 76,
+  "excluded_reasons": {
+   "gold anchor turn is read-only": 132,
+   "gold anchor turn is login only": 2,
+   "anchor certification: construction error": 8
+  },
+  "read_only_excluded_pairs": 134,
+  "read_only_excluded_miss_func": 65,
+  "read_only_excluded_miss_param": 69,
+  "excluded_top_gold_functions": {
+   "get_zipcode_based_on_city": 39,
+   "estimate_distance": 20,
+   "get_stock_info": 14,
+   "cd": 12,
+   "get_watchlist": 9,
+   "wc": 9,
+   "cat": 8,
+   "check_tire_pressure": 8
+  },
+  "distinct_base_twins_all": 188,
+  "distinct_base_twins_scored": 151,
+  "distinct_base_anchor_turns_scored": 184,
+  "bad_key_restored_pairs": 230,
+  "bad_key_restored_added": 7
+ },
+ "tables": {
+  "C": {
+   "qwen3.8-max-0902-FC": {
+    "display": "Qwen3.8-Max",
+    "n": 223,
+    "act": 89.7,
+    "hold": 66.8,
+    "decision": 78.3,
+    "ci95": [
+     74.3,
+     82.2
+    ],
+    "both": 57.4
+   },
+   "gpt-5.4-FC": {
+    "display": "gpt-5.4",
+    "n": 223,
+    "act": 83.4,
+    "hold": 78.0,
+    "decision": 80.7,
+    "ci95": [
+     77.3,
+     84.1
+    ],
+    "both": 61.4
+   },
+   "Qwen3.6-27B-FC": {
+    "display": "Qwen3.6-27B",
+    "n": 223,
+    "act": 97.8,
+    "hold": 56.5,
+    "decision": 77.1,
+    "ci95": [
+     73.3,
+     81.0
+    ],
+    "both": 55.6
+   },
+   "gemma-4-31B-it": {
+    "display": "gemma-4-31B-it",
+    "n": 223,
+    "act": 97.8,
+    "hold": 59.2,
+    "decision": 78.5,
+    "ci95": [
+     75.1,
+     81.8
+    ],
+    "both": 57.4
+   },
+   "deepseek-v4-flash-FC": {
+    "display": "deepseek-v4-flash",
+    "n": 223,
+    "act": 92.4,
+    "hold": 59.2,
+    "decision": 75.8,
+    "ci95": [
+     71.8,
+     79.6
+    ],
+    "both": 53.4
+   },
+   "Qwen3.5-9B-FC": {
+    "display": "Qwen3.5-9B",
+    "n": 223,
+    "act": 91.5,
+    "hold": 63.2,
+    "decision": 77.4,
+    "ci95": [
+     73.5,
+     81.1
+    ],
+    "both": 56.5
+   },
+   "gemma-4-E4B-it": {
+    "display": "gemma-4-E4B-it",
+    "n": 223,
+    "act": 83.4,
+    "hold": 52.0,
+    "decision": 67.7,
+    "ci95": [
+     63.6,
+     71.8
+    ],
+    "both": 39.0
+   }
+  },
+  "C-credited": {
+   "qwen3.8-max-0902-FC": {
+    "display": "Qwen3.8-Max",
+    "n": 223,
+    "act": 89.7,
+    "hold": 71.7,
+    "decision": 80.7,
+    "ci95": [
+     76.9,
+     84.5
+    ],
+    "both": 62.3
+   },
+   "gpt-5.4-FC": {
+    "display": "gpt-5.4",
+    "n": 223,
+    "act": 83.4,
+    "hold": 83.0,
+    "decision": 83.2,
+    "ci95": [
+     79.7,
+     86.5
+    ],
+    "both": 66.4
+   },
+   "Qwen3.6-27B-FC": {
+    "display": "Qwen3.6-27B",
+    "n": 223,
+    "act": 97.8,
+    "hold": 63.7,
+    "decision": 80.7,
+    "ci95": [
+     77.0,
+     84.2
+    ],
+    "both": 62.8
+   },
+   "gemma-4-31B-it": {
+    "display": "gemma-4-31B-it",
+    "n": 223,
+    "act": 97.8,
+    "hold": 65.9,
+    "decision": 81.8,
+    "ci95": [
+     78.4,
+     85.1
+    ],
+    "both": 63.7
+   },
+   "deepseek-v4-flash-FC": {
+    "display": "deepseek-v4-flash",
+    "n": 223,
+    "act": 92.4,
+    "hold": 65.9,
+    "decision": 79.1,
+    "ci95": [
+     75.2,
+     82.9
+    ],
+    "both": 60.1
+   },
+   "Qwen3.5-9B-FC": {
+    "display": "Qwen3.5-9B",
+    "n": 223,
+    "act": 91.5,
+    "hold": 70.0,
+    "decision": 80.7,
+    "ci95": [
+     76.9,
+     84.4
+    ],
+    "both": 63.2
+   },
+   "gemma-4-E4B-it": {
+    "display": "gemma-4-E4B-it",
+    "n": 223,
+    "act": 83.4,
+    "hold": 57.8,
+    "decision": 70.6,
+    "ci95": [
+     66.7,
+     74.6
+    ],
+    "both": 44.4
+   }
+  },
+  "C-uncertified": {
+   "qwen3.8-max-0902-FC": {
+    "display": "Qwen3.8-Max",
+    "n": 231,
+    "act": 90.0,
+    "hold": 65.4,
+    "decision": 77.7,
+    "ci95": [
+     73.9,
+     81.5
+    ],
+    "both": 56.3
+   },
+   "gpt-5.4-FC": {
+    "display": "gpt-5.4",
+    "n": 231,
+    "act": 83.1,
+    "hold": 76.6,
+    "decision": 79.9,
+    "ci95": [
+     76.3,
+     83.3
+    ],
+    "both": 59.7
+   },
+   "Qwen3.6-27B-FC": {
+    "display": "Qwen3.6-27B",
+    "n": 231,
+    "act": 97.8,
+    "hold": 55.4,
+    "decision": 76.6,
+    "ci95": [
+     72.8,
+     80.4
+    ],
+    "both": 54.5
+   },
+   "gemma-4-31B-it": {
+    "display": "gemma-4-31B-it",
+    "n": 231,
+    "act": 97.8,
+    "hold": 57.6,
+    "decision": 77.7,
+    "ci95": [
+     74.4,
+     81.1
+    ],
+    "both": 55.8
+   },
+   "deepseek-v4-flash-FC": {
+    "display": "deepseek-v4-flash",
+    "n": 231,
+    "act": 92.6,
+    "hold": 57.6,
+    "decision": 75.1,
+    "ci95": [
+     71.4,
+     78.9
+    ],
+    "both": 51.9
+   },
+   "Qwen3.5-9B-FC": {
+    "display": "Qwen3.5-9B",
+    "n": 231,
+    "act": 91.8,
+    "hold": 61.9,
+    "decision": 76.8,
+    "ci95": [
+     73.1,
+     80.4
+    ],
+    "both": 55.4
+   },
+   "gemma-4-E4B-it": {
+    "display": "gemma-4-E4B-it",
+    "n": 231,
+    "act": 83.5,
+    "hold": 50.6,
+    "decision": 67.1,
+    "ci95": [
+     63.0,
+     71.2
+    ],
+    "both": 37.7
+   }
+  },
+  "C-login": {
+   "qwen3.8-max-0902-FC": {
+    "display": "Qwen3.8-Max",
+    "n": 225,
+    "act": 90.7,
+    "hold": 64.4,
+    "decision": 77.6,
+    "ci95": [
+     73.7,
+     81.3
+    ],
+    "both": 56.0
+   },
+   "gpt-5.4-FC": {
+    "display": "gpt-5.4",
+    "n": 225,
+    "act": 84.0,
+    "hold": 75.6,
+    "decision": 79.8,
+    "ci95": [
+     76.3,
+     83.2
+    ],
+    "both": 59.6
+   },
+   "Qwen3.6-27B-FC": {
+    "display": "Qwen3.6-27B",
+    "n": 225,
+    "act": 97.8,
+    "hold": 54.2,
+    "decision": 76.0,
+    "ci95": [
+     72.2,
+     79.7
+    ],
+    "both": 53.3
+   },
+   "gemma-4-31B-it": {
+    "display": "gemma-4-31B-it",
+    "n": 225,
+    "act": 97.8,
+    "hold": 57.3,
+    "decision": 77.6,
+    "ci95": [
+     74.1,
+     81.0
+    ],
+    "both": 55.6
+   },
+   "deepseek-v4-flash-FC": {
+    "display": "deepseek-v4-flash",
+    "n": 225,
+    "act": 93.8,
+    "hold": 56.0,
+    "decision": 74.9,
+    "ci95": [
+     71.1,
+     78.6
+    ],
+    "both": 51.6
+   },
+   "Qwen3.5-9B-FC": {
+    "display": "Qwen3.5-9B",
+    "n": 225,
+    "act": 91.6,
+    "hold": 61.8,
+    "decision": 76.7,
+    "ci95": [
+     72.9,
+     80.4
+    ],
+    "both": 55.1
+   },
+   "gemma-4-E4B-it": {
+    "display": "gemma-4-E4B-it",
+    "n": 225,
+    "act": 83.6,
+    "hold": 51.1,
+    "decision": 67.3,
+    "ci95": [
+     63.3,
+     71.3
+    ],
+    "both": 38.2
+   }
+  },
+  "C-reached": {
+   "qwen3.8-max-0902-FC": {
+    "display": "Qwen3.8-Max",
+    "n": 223,
+    "act": 89.7,
+    "hold": 66.8,
+    "decision": 78.3,
+    "ci95": [
+     74.3,
+     82.2
+    ],
+    "both": 57.4
+   },
+   "gpt-5.4-FC": {
+    "display": "gpt-5.4",
+    "n": 223,
+    "act": 83.4,
+    "hold": 78.0,
+    "decision": 80.7,
+    "ci95": [
+     77.3,
+     84.1
+    ],
+    "both": 61.4
+   },
+   "Qwen3.6-27B-FC": {
+    "display": "Qwen3.6-27B",
+    "n": 223,
+    "act": 97.8,
+    "hold": 56.5,
+    "decision": 77.1,
+    "ci95": [
+     73.3,
+     81.0
+    ],
+    "both": 55.6
+   },
+   "gemma-4-31B-it": {
+    "display": "gemma-4-31B-it",
+    "n": 222,
+    "act": 97.7,
+    "hold": 59.0,
+    "decision": 78.4,
+    "ci95": [
+     75.0,
+     81.7
+    ],
+    "both": 57.2
+   },
+   "deepseek-v4-flash-FC": {
+    "display": "deepseek-v4-flash",
+    "n": 223,
+    "act": 92.4,
+    "hold": 59.2,
+    "decision": 75.8,
+    "ci95": [
+     71.8,
+     79.6
+    ],
+    "both": 53.4
+   },
+   "Qwen3.5-9B-FC": {
+    "display": "Qwen3.5-9B",
+    "n": 222,
+    "act": 91.9,
+    "hold": 63.1,
+    "decision": 77.5,
+    "ci95": [
+     73.7,
+     81.1
+    ],
+    "both": 56.8
+   },
+   "gemma-4-E4B-it": {
+    "display": "gemma-4-E4B-it",
+    "n": 211,
+    "act": 88.2,
+    "hold": 50.2,
+    "decision": 69.2,
+    "ci95": [
+     65.0,
+     73.3
+    ],
+    "both": 41.2
+   }
+  }
+ },
+ "spread": {
+  "C": 13.0,
+  "C-credited": 12.6,
+  "C-uncertified": 12.8,
+  "C-login": 12.4,
+  "C-reached": 11.5
+ },
+ "rank1": {
+  "C": {
+   "qwen3.8-max-0902-FC": 10.1,
+   "gpt-5.4-FC": 77.8,
+   "Qwen3.6-27B-FC": 1.7,
+   "gemma-4-31B-it": 8.6,
+   "deepseek-v4-flash-FC": 0.0,
+   "Qwen3.5-9B-FC": 1.8,
+   "gemma-4-E4B-it": 0.0
+  },
+  "C-credited": {
+   "qwen3.8-max-0902-FC": 7.8,
+   "gpt-5.4-FC": 67.0,
+   "Qwen3.6-27B-FC": 4.6,
+   "gemma-4-31B-it": 16.3,
+   "deepseek-v4-flash-FC": 0.2,
+   "Qwen3.5-9B-FC": 4.1,
+   "gemma-4-E4B-it": 0.0
+  },
+  "C-uncertified": {
+   "qwen3.8-max-0902-FC": 12.7,
+   "gpt-5.4-FC": 74.9,
+   "Qwen3.6-27B-FC": 2.3,
+   "gemma-4-31B-it": 7.8,
+   "deepseek-v4-flash-FC": 0.0,
+   "Qwen3.5-9B-FC": 2.2,
+   "gemma-4-E4B-it": 0.0
+  },
+  "C-login": {
+   "qwen3.8-max-0902-FC": 12.0,
+   "gpt-5.4-FC": 76.8,
+   "Qwen3.6-27B-FC": 1.0,
+   "gemma-4-31B-it": 7.4,
+   "deepseek-v4-flash-FC": 0.1,
+   "Qwen3.5-9B-FC": 2.7,
+   "gemma-4-E4B-it": 0.0
+  }
+ },
+ "truncation": {
+  "qwen3.8-max-0902-FC": [
+   0,
+   0
+  ],
+  "gpt-5.4-FC": [
+   0,
+   0
+  ],
+  "Qwen3.6-27B-FC": [
+   0,
+   1
+  ],
+  "gemma-4-31B-it": [
+   0,
+   2
+  ],
+  "deepseek-v4-flash-FC": [
+   0,
+   0
+  ],
+  "Qwen3.5-9B-FC": [
+   2,
+   1
+  ],
+  "gemma-4-E4B-it": [
+   20,
+   19
+  ]
+ },
+ "companions": {
+  "by_category": {
+   "qwen3.8-max-0902-FC": {
+    "miss_func": {
+     "n": 116,
+     "act": 91.4,
+     "hold": 57.8,
+     "decision": 74.6
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 87.9,
+     "hold": 76.6,
+     "decision": 82.2
+    }
+   },
+   "gpt-5.4-FC": {
+    "miss_func": {
+     "n": 116,
+     "act": 84.5,
+     "hold": 75.0,
+     "decision": 79.7
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 82.2,
+     "hold": 81.3,
+     "decision": 81.8
+    }
+   },
+   "Qwen3.6-27B-FC": {
+    "miss_func": {
+     "n": 116,
+     "act": 96.6,
+     "hold": 56.9,
+     "decision": 76.7
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 99.1,
+     "hold": 56.1,
+     "decision": 77.6
+    }
+   },
+   "gemma-4-31B-it": {
+    "miss_func": {
+     "n": 116,
+     "act": 98.3,
+     "hold": 53.4,
+     "decision": 75.9
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 97.2,
+     "hold": 65.4,
+     "decision": 81.3
+    }
+   },
+   "deepseek-v4-flash-FC": {
+    "miss_func": {
+     "n": 116,
+     "act": 92.2,
+     "hold": 54.3,
+     "decision": 73.3
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 92.5,
+     "hold": 64.5,
+     "decision": 78.5
+    }
+   },
+   "Qwen3.5-9B-FC": {
+    "miss_func": {
+     "n": 116,
+     "act": 93.1,
+     "hold": 59.5,
+     "decision": 76.3
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 89.7,
+     "hold": 67.3,
+     "decision": 78.5
+    }
+   },
+   "gemma-4-E4B-it": {
+    "miss_func": {
+     "n": 116,
+     "act": 83.6,
+     "hold": 47.4,
+     "decision": 65.5
+    },
+    "miss_param": {
+     "n": 107,
+     "act": 83.2,
+     "hold": 57.0,
+     "decision": 70.1
+    }
+   }
+  },
+  "excluded_attempts": {
+   "qwen3.8-max-0902-FC": {
+    "n": 134,
+    "act_base": 3.0,
+    "act_miss": 11.2,
+    "either": 13.4
+   },
+   "gpt-5.4-FC": {
+    "n": 134,
+    "act_base": 0.0,
+    "act_miss": 2.2,
+    "either": 2.2
+   },
+   "Qwen3.6-27B-FC": {
+    "n": 134,
+    "act_base": 1.5,
+    "act_miss": 6.7,
+    "either": 7.5
+   },
+   "gemma-4-31B-it": {
+    "n": 134,
+    "act_base": 0.0,
+    "act_miss": 4.5,
+    "either": 4.5
+   },
+   "deepseek-v4-flash-FC": {
+    "n": 134,
+    "act_base": 0.0,
+    "act_miss": 11.2,
+    "either": 11.2
+   },
+   "Qwen3.5-9B-FC": {
+    "n": 134,
+    "act_base": 0.0,
+    "act_miss": 4.5,
+    "either": 4.5
+   },
+   "gemma-4-E4B-it": {
+    "n": 134,
+    "act_base": 0.7,
+    "act_miss": 3.7,
+    "either": 4.5
+   }
+  },
+  "act_per_anchor": {
+   "qwen3.8-max-0902-FC": {
+    "anchors": 184,
+    "act_per_pair": 89.7,
+    "act_per_anchor": 91.3
+   },
+   "gpt-5.4-FC": {
+    "anchors": 184,
+    "act_per_pair": 83.4,
+    "act_per_anchor": 82.1
+   },
+   "Qwen3.6-27B-FC": {
+    "anchors": 184,
+    "act_per_pair": 97.8,
+    "act_per_anchor": 97.3
+   },
+   "gemma-4-31B-it": {
+    "anchors": 184,
+    "act_per_pair": 97.8,
+    "act_per_anchor": 97.3
+   },
+   "deepseek-v4-flash-FC": {
+    "anchors": 184,
+    "act_per_pair": 92.4,
+    "act_per_anchor": 91.8
+   },
+   "Qwen3.5-9B-FC": {
+    "anchors": 184,
+    "act_per_pair": 91.5,
+    "act_per_anchor": 90.8
+   },
+   "gemma-4-E4B-it": {
+    "anchors": 184,
+    "act_per_pair": 83.4,
+    "act_per_anchor": 82.1
+   }
+  },
+  "same_history": {
+   "qwen3.8-max-0902-FC": {
+    "n": 128,
+    "act": 92.2,
+    "hold": 65.6,
+    "decision": 78.9
+   },
+   "gpt-5.4-FC": {
+    "n": 182,
+    "act": 82.4,
+    "hold": 76.9,
+    "decision": 79.7
+   },
+   "Qwen3.6-27B-FC": {
+    "n": 197,
+    "act": 99.0,
+    "hold": 58.4,
+    "decision": 78.7
+   },
+   "gemma-4-31B-it": {
+    "n": 212,
+    "act": 97.6,
+    "hold": 58.5,
+    "decision": 78.1
+   },
+   "deepseek-v4-flash-FC": {
+    "n": 149,
+    "act": 93.3,
+    "hold": 57.7,
+    "decision": 75.5
+   },
+   "Qwen3.5-9B-FC": {
+    "n": 193,
+    "act": 92.7,
+    "hold": 64.2,
+    "decision": 78.5
+   },
+   "gemma-4-E4B-it": {
+    "n": 196,
+    "act": 87.8,
+    "hold": 49.5,
+    "decision": 68.6
+   }
+  },
+  "heldback_content": {
+   "qwen3.8-max-0902-FC": {
+    "held": 149,
+    "read_only": 132,
+    "text": 149,
+    "silent": 0
+   },
+   "gpt-5.4-FC": {
+    "held": 174,
+    "read_only": 46,
+    "text": 174,
+    "silent": 0
+   },
+   "Qwen3.6-27B-FC": {
+    "held": 126,
+    "read_only": 69,
+    "text": 126,
+    "silent": 0
+   },
+   "gemma-4-31B-it": {
+    "held": 132,
+    "read_only": 44,
+    "text": 131,
+    "silent": 1
+   },
+   "deepseek-v4-flash-FC": {
+    "held": 132,
+    "read_only": 95,
+    "text": 131,
+    "silent": 1
+   },
+   "Qwen3.5-9B-FC": {
+    "held": 141,
+    "read_only": 75,
+    "text": 141,
+    "silent": 0
+   },
+   "gemma-4-E4B-it": {
+    "held": 116,
+    "read_only": 35,
+    "text": 103,
+    "silent": 13
+   }
+  },
+  "heldback_pooled": {
+   "held": 970,
+   "silent": 15
+  },
+  "base_no_attempt": {
+   "qwen3.8-max-0902-FC": {
+    "n": 23,
+    "zero_calls": 1,
+    "read_only": 22
+   },
+   "gpt-5.4-FC": {
+    "n": 37,
+    "zero_calls": 21,
+    "read_only": 16
+   },
+   "Qwen3.6-27B-FC": {
+    "n": 5,
+    "zero_calls": 3,
+    "read_only": 2
+   },
+   "gemma-4-31B-it": {
+    "n": 5,
+    "zero_calls": 2,
+    "read_only": 3
+   },
+   "deepseek-v4-flash-FC": {
+    "n": 17,
+    "zero_calls": 1,
+    "read_only": 16
+   },
+   "Qwen3.5-9B-FC": {
+    "n": 19,
+    "zero_calls": 8,
+    "read_only": 11
+   },
+   "gemma-4-E4B-it": {
+    "n": 37,
+    "zero_calls": 23,
+    "read_only": 14
+   }
+  },
+  "bad_keys_restored": {
+   "pairs": 230,
+   "added": 7,
+   "models": {
+    "qwen3.8-max-0902-FC": {
+     "decision": 78.3,
+     "restored": 78.3,
+     "change": 0.01
+    },
+    "gpt-5.4-FC": {
+     "decision": 80.7,
+     "restored": 80.0,
+     "change": -0.72
+    },
+    "Qwen3.6-27B-FC": {
+     "decision": 77.1,
+     "restored": 76.7,
+     "change": -0.39
+    },
+    "gemma-4-31B-it": {
+     "decision": 78.5,
+     "restored": 78.3,
+     "change": -0.21
+    },
+    "deepseek-v4-flash-FC": {
+     "decision": 75.8,
+     "restored": 75.4,
+     "change": -0.35
+    },
+    "Qwen3.5-9B-FC": {
+     "decision": 77.4,
+     "restored": 77.2,
+     "change": -0.18
+    },
+    "gemma-4-E4B-it": {
+     "decision": 67.7,
+     "restored": 67.4,
+     "change": -0.32
+    }
+   }
+  },
+  "distinct_base_twins": 151,
+  "official_raw": {
+   "qwen3.8-max-0902-FC": {
+    "miss": 47.1,
+    "base": 52.3,
+    "decision": 78.3
+   },
+   "gpt-5.4-FC": {
+    "miss": 32.7,
+    "base": 39.1,
+    "decision": 80.7
+   },
+   "Qwen3.6-27B-FC": {
+    "miss": 58.7,
+    "base": 77.5,
+    "decision": 77.1
+   },
+   "gemma-4-31B-it": {
+    "miss": 50.7,
+    "base": 62.9,
+    "decision": 78.5
+   },
+   "deepseek-v4-flash-FC": {
+    "miss": 52.0,
+    "base": 66.9,
+    "decision": 75.8
+   },
+   "Qwen3.5-9B-FC": {
+    "miss": 52.5,
+    "base": 57.6,
+    "decision": 77.4
+   },
+   "gemma-4-E4B-it": {
+    "miss": 22.9,
+    "base": 25.8,
+    "decision": 67.7
+   }
+  },
+  "verdict_vs_attempt": {
+   "qwen3.8-max-0902-FC": {
+    "passes": 105,
+    "pass_attempt": 29.5,
+    "fails": 118,
+    "fail_attempt": 36.4
+   },
+   "gpt-5.4-FC": {
+    "passes": 73,
+    "pass_attempt": 16.4,
+    "fails": 150,
+    "fail_attempt": 24.7
+   },
+   "Qwen3.6-27B-FC": {
+    "passes": 131,
+    "pass_attempt": 31.3,
+    "fails": 92,
+    "fail_attempt": 60.9
+   },
+   "gemma-4-31B-it": {
+    "passes": 113,
+    "pass_attempt": 29.2,
+    "fails": 110,
+    "fail_attempt": 52.7
+   },
+   "deepseek-v4-flash-FC": {
+    "passes": 116,
+    "pass_attempt": 27.6,
+    "fails": 107,
+    "fail_attempt": 55.1
+   },
+   "Qwen3.5-9B-FC": {
+    "passes": 117,
+    "pass_attempt": 26.5,
+    "fails": 106,
+    "fail_attempt": 48.1
+   },
+   "gemma-4-E4B-it": {
+    "passes": 51,
+    "pass_attempt": 45.1,
+    "fails": 172,
+    "fail_attempt": 48.8
+   }
+  },
+  "spearman": {
+   "miss_rho": -0.11,
+   "miss_p": 0.82,
+   "base_rho": -0.11,
+   "base_p": 0.82
+  },
+  "ranks": {
+   "official": [
+    "Qwen3.6-27B-FC",
+    "Qwen3.5-9B-FC",
+    "deepseek-v4-flash-FC",
+    "gemma-4-31B-it",
+    "qwen3.8-max-0902-FC",
+    "gpt-5.4-FC",
+    "gemma-4-E4B-it"
+   ],
+   "decision": [
+    "gpt-5.4-FC",
+    "gemma-4-31B-it",
+    "qwen3.8-max-0902-FC",
+    "Qwen3.5-9B-FC",
+    "Qwen3.6-27B-FC",
+    "deepseek-v4-flash-FC",
+    "gemma-4-E4B-it"
+   ]
+  }
+ }
+}

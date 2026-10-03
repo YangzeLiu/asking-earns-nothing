@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="396pt" height="129.6pt" viewBox="0 0 396 129.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-17T15:48:04.309164</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 129.6 
+L 396 129.6 
+L 396 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 15.84 107.568 
+L 74.88 107.568 
+L 74.88 32.4 
+L 15.84 32.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m7755f282f0" d="M 0 0 
+L -3 0 
+" style="stroke: #181b1d"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7755f282f0" x="15.84" y="101.633684" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="10.84" y="103.917028" transform="rotate(-0 10.84 103.917028)">10</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m7755f282f0" x="15.84" y="81.852632" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="10.84" y="84.135975" transform="rotate(-0 10.84 84.135975)">20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m7755f282f0" x="15.84" y="62.071579" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="10.84" y="64.354923" transform="rotate(-0 10.84 64.354923)">30</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m7755f282f0" x="15.84" y="42.290526" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="10.84" y="44.57387" transform="rotate(-0 10.84 44.57387)">40</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 15.84 101.633684 
+L 15.84 42.290526 
+" style="fill: none; stroke: #181b1d; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 37.16 98.864337 
+L 53.56 76.313937 
+" clip-path="url(#p803ece6021)" style="fill: none; stroke: #b44139; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 37.16 85.0176 
+L 53.56 77.698611 
+" clip-path="url(#p803ece6021)" style="fill: none; stroke-dasharray: 3.9,2.1; stroke-dashoffset: 0; stroke: #b44139; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: end" x="39.62" y="115.517247" transform="rotate(-0 39.62 115.517247)">neutral</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="51.1" y="115.517247" transform="rotate(-0 51.1 115.517247)">injected</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="17.152" y="38.971799" transform="rotate(-0 17.152 38.971799)">%</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #b44139; font: 700 6.8px 'Lato'" transform="translate(15.84 21.110188)">gpt-5.4</text>
+    <text style="fill: #b44139; font: 700 6.8px 'Lato'" transform="translate(15.84 28.4)">“do not ask”</text>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m9db98e3f1e" d="M 0 1.802776 
+C 0.478102 1.802776 0.936686 1.612824 1.274755 1.274755 
+C 1.612824 0.936686 1.802776 0.478102 1.802776 0 
+C 1.802776 -0.478102 1.612824 -0.936686 1.274755 -1.274755 
+C 0.936686 -1.612824 0.478102 -1.802776 0 -1.802776 
+C -0.478102 -1.802776 -0.936686 -1.612824 -1.274755 -1.274755 
+C -1.612824 -0.936686 -1.802776 -0.478102 -1.802776 0 
+C -1.802776 0.478102 -1.612824 0.936686 -1.274755 1.274755 
+C -0.936686 1.612824 -0.478102 1.802776 0 1.802776 
+z
+" style="stroke: #ffffff; stroke-width: 0.5"/>
+    </defs>
+    <g clip-path="url(#p803ece6021)">
+     <use xlink:href="#m9db98e3f1e" x="37.16" y="98.864337" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#m9db98e3f1e" x="53.56" y="76.313937" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#p803ece6021)">
+     <use xlink:href="#m9db98e3f1e" x="37.16" y="85.0176" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#m9db98e3f1e" x="53.56" y="77.698611" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="text_9">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="34.372" y="100.763384" transform="rotate(-0 34.372 100.763384)">11.4</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="56.348" y="74.771081" transform="rotate(-0 56.348 74.771081)">22.8</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="34.372" y="86.916647" transform="rotate(-0 34.372 86.916647)">18.4</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="56.348" y="83.039561" transform="rotate(-0 56.348 83.039561)">22.1</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_4">
+    <path d="M 78.48 107.568 
+L 137.52 107.568 
+L 137.52 32.4 
+L 78.48 32.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_5">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m7755f282f0" x="78.48" y="101.633684" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m7755f282f0" x="78.48" y="81.852632" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m7755f282f0" x="78.48" y="62.071579" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m7755f282f0" x="78.48" y="42.290526" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_5">
+    <path d="M 78.48 101.633684 
+L 78.48 42.290526 
+" style="fill: none; stroke: #181b1d; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 99.8 78.489853 
+L 116.2 97.677474 
+" clip-path="url(#p208f0b81c2)" style="fill: none; stroke: #46596c; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 99.8 54.752589 
+L 116.2 67.214653 
+" clip-path="url(#p208f0b81c2)" style="fill: none; stroke-dasharray: 3.9,2.1; stroke-dashoffset: 0; stroke: #46596c; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_13">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: end" x="102.26" y="115.517247" transform="rotate(-0 102.26 115.517247)">neutral</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="113.74" y="115.517247" transform="rotate(-0 113.74 115.517247)">injected</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #46596c; font: 700 6.8px 'Lato'" transform="translate(78.48 21.110188)">gemma-4-31B-it</text>
+    <text style="fill: #46596c; font: 700 6.8px 'Lato'" transform="translate(78.48 28.4)">“ask first”</text>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="mbfd1360320" d="M 0 1.802776 
+C 0.478102 1.802776 0.936686 1.612824 1.274755 1.274755 
+C 1.612824 0.936686 1.802776 0.478102 1.802776 0 
+C 1.802776 -0.478102 1.612824 -0.936686 1.274755 -1.274755 
+C 0.936686 -1.612824 0.478102 -1.802776 0 -1.802776 
+C -0.478102 -1.802776 -0.936686 -1.612824 -1.274755 -1.274755 
+C -1.612824 -0.936686 -1.802776 -0.478102 -1.802776 0 
+C -1.802776 0.478102 -1.612824 0.936686 -1.274755 1.274755 
+C -0.936686 1.612824 -0.478102 1.802776 0 1.802776 
+z
+" style="stroke: #ffffff; stroke-width: 0.5"/>
+    </defs>
+    <g clip-path="url(#p208f0b81c2)">
+     <use xlink:href="#mbfd1360320" x="99.8" y="78.489853" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#mbfd1360320" x="116.2" y="97.677474" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#p208f0b81c2)">
+     <use xlink:href="#mbfd1360320" x="99.8" y="54.752589" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#mbfd1360320" x="116.2" y="67.214653" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="text_16">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="97.012" y="80.3889" transform="rotate(-0 97.012 80.3889)">21.7</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="118.988" y="99.576521" transform="rotate(-0 118.988 99.576521)">12.0</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="97.012" y="56.651636" transform="rotate(-0 97.012 56.651636)">33.7</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="118.988" y="69.1137" transform="rotate(-0 118.988 69.1137)">27.4</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_6">
+    <path d="M 159.12 107.568 
+L 218.16 107.568 
+L 218.16 32.4 
+L 159.12 32.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_9">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m7755f282f0" x="159.12" y="100.734545" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="154.12" y="103.017889" transform="rotate(-0 154.12 103.017889)">30</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m7755f282f0" x="159.12" y="83.650909" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="154.12" y="85.934253" transform="rotate(-0 154.12 85.934253)">40</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m7755f282f0" x="159.12" y="66.567273" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="154.12" y="68.850616" transform="rotate(-0 154.12 68.850616)">50</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m7755f282f0" x="159.12" y="49.483636" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="154.12" y="51.76698" transform="rotate(-0 154.12 51.76698)">60</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 159.12 100.734545 
+L 159.12 49.483636 
+" style="fill: none; stroke: #181b1d; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 180.44 98.172 
+L 196.84 75.109091 
+" clip-path="url(#p777a5c94ea)" style="fill: none; stroke: #b44139; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 180.44 94.755273 
+L 196.84 67.421455 
+" clip-path="url(#p777a5c94ea)" style="fill: none; stroke-dasharray: 3.9,2.1; stroke-dashoffset: 0; stroke: #b44139; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 180.44 85.0176 
+L 196.84 44.871055 
+" clip-path="url(#p777a5c94ea)" style="fill: none; stroke-dasharray: 1.2,2.1; stroke-dashoffset: 0; stroke: #b44139; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_24">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: end" x="182.9" y="115.517247" transform="rotate(-0 182.9 115.517247)">neutral</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="194.38" y="115.517247" transform="rotate(-0 194.38 115.517247)">injected</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="160.432" y="46.164909" transform="rotate(-0 160.432 46.164909)">%</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #b44139; font: 700 6.8px 'Lato'" transform="translate(159.12 21.110188)">gpt-5.4</text>
+    <text style="fill: #b44139; font: 700 6.8px 'Lato'" transform="translate(159.12 28.4)">“do not ask”</text>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#p777a5c94ea)">
+     <use xlink:href="#m9db98e3f1e" x="180.44" y="98.172" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#m9db98e3f1e" x="196.84" y="75.109091" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#p777a5c94ea)">
+     <use xlink:href="#m9db98e3f1e" x="180.44" y="94.755273" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#m9db98e3f1e" x="196.84" y="67.421455" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="PathCollection_7">
+    <g clip-path="url(#p777a5c94ea)">
+     <use xlink:href="#m9db98e3f1e" x="180.44" y="85.0176" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#m9db98e3f1e" x="196.84" y="44.871055" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="text_28">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="177.652" y="102.815818" transform="rotate(-0 177.652 102.815818)">31.5</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="199.628" y="77.201752" transform="rotate(-0 199.628 77.201752)">45.0</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="177.652" y="94.547338" transform="rotate(-0 177.652 94.547338)">33.5</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="199.628" y="68.933272" transform="rotate(-0 199.628 68.933272)">49.5</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="177.652" y="86.278858" transform="rotate(-0 177.652 86.278858)">39.2</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="199.628" y="46.963716" transform="rotate(-0 199.628 46.963716)">62.7</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_8">
+    <path d="M 221.76 107.568 
+L 280.8 107.568 
+L 280.8 32.4 
+L 221.76 32.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_7"/>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_13">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m7755f282f0" x="221.76" y="100.734545" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m7755f282f0" x="221.76" y="83.650909" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m7755f282f0" x="221.76" y="66.567273" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m7755f282f0" x="221.76" y="49.483636" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 221.76 100.734545 
+L 221.76 49.483636 
+" style="fill: none; stroke: #181b1d; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 243.08 69.984 
+L 259.48 69.129818 
+" clip-path="url(#p1033978039)" style="fill: none; stroke: #46596c; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 243.08 59.733818 
+L 259.48 68.275636 
+" clip-path="url(#p1033978039)" style="fill: none; stroke-dasharray: 3.9,2.1; stroke-dashoffset: 0; stroke: #46596c; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_34">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: end" x="245.54" y="115.517247" transform="rotate(-0 245.54 115.517247)">neutral</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="257.02" y="115.517247" transform="rotate(-0 257.02 115.517247)">injected</text>
+   </g>
+   <g id="text_36">
+    <text style="fill: #46596c; font: 700 6.8px 'Lato'" transform="translate(221.76 21.110188)">gemma-4-31B-it</text>
+    <text style="fill: #46596c; font: 700 6.8px 'Lato'" transform="translate(221.76 28.4)">“ask first”</text>
+   </g>
+   <g id="PathCollection_8">
+    <g clip-path="url(#p1033978039)">
+     <use xlink:href="#mbfd1360320" x="243.08" y="69.984" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#mbfd1360320" x="259.48" y="69.129818" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="PathCollection_9">
+    <g clip-path="url(#p1033978039)">
+     <use xlink:href="#mbfd1360320" x="243.08" y="59.733818" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#mbfd1360320" x="259.48" y="68.275636" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="text_37">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="240.292" y="71.883047" transform="rotate(-0 240.292 71.883047)">48.0</text>
+   </g>
+   <g id="text_38">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="262.268" y="74.736014" transform="rotate(-0 262.268 74.736014)">48.5</text>
+   </g>
+   <g id="text_39">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="240.292" y="61.632865" transform="rotate(-0 240.292 61.632865)">54.0</text>
+   </g>
+   <g id="text_40">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="262.268" y="66.467534" transform="rotate(-0 262.268 66.467534)">49.0</text>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_10">
+    <path d="M 302.4 107.568 
+L 370.8 107.568 
+L 370.8 32.4 
+L 302.4 32.4 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_9"/>
+   <g id="matplotlib.axis_10">
+    <g id="ytick_17">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m7755f282f0" x="302.4" y="94.303059" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="297.4" y="96.586403" transform="rotate(-0 297.4 96.586403)">75</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m7755f282f0" x="302.4" y="72.194824" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="297.4" y="74.478167" transform="rotate(-0 297.4 74.478167)">80</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m7755f282f0" x="302.4" y="50.086588" style="fill: #181b1d; stroke: #181b1d"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="fill: #181b1d; font: 6.2px 'Lato'; text-anchor: end" x="297.4" y="52.369932" transform="rotate(-0 297.4 52.369932)">85</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_11">
+    <path d="M 302.4 94.303059 
+L 302.4 50.086588 
+" style="fill: none; stroke: #181b1d; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 327.1 69.099671 
+L 346.1 64.235859 
+" clip-path="url(#p06d84d784b)" style="fill: none; stroke: #b44139; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_30">
+    <path d="M 327.1 78.827294 
+L 346.1 58.929882 
+" clip-path="url(#p06d84d784b)" style="fill: none; stroke: #46596c; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_44">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: end" x="329.95" y="115.517247" transform="rotate(-0 329.95 115.517247)">neutral</text>
+   </g>
+   <g id="text_45">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="343.25" y="115.517247" transform="rotate(-0 343.25 115.517247)">injected</text>
+   </g>
+   <g id="text_46">
+    <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="303.92" y="46.767861" transform="rotate(-0 303.92 46.767861)">%</text>
+   </g>
+   <g id="text_47">
+    <text style="fill: #b44139; font: 700 6.8px 'Lato'; text-anchor: start" x="302.4" y="19.145933" transform="rotate(-0 302.4 19.145933)">gpt-5.4 “do not ask”</text>
+   </g>
+   <g id="text_48">
+    <text style="fill: #46596c; font: 700 6.8px 'Lato'; text-anchor: start" x="302.4" y="28.917772" transform="rotate(-0 302.4 28.917772)">gemma-4-31B-it “ask first”</text>
+   </g>
+   <g id="PathCollection_10">
+    <g clip-path="url(#p06d84d784b)">
+     <use xlink:href="#m9db98e3f1e" x="327.1" y="69.099671" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#m9db98e3f1e" x="346.1" y="64.235859" style="fill: #b44139; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="PathCollection_11">
+    <g clip-path="url(#p06d84d784b)">
+     <use xlink:href="#mbfd1360320" x="327.1" y="78.827294" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+     <use xlink:href="#mbfd1360320" x="346.1" y="58.929882" style="fill: #46596c; stroke: #ffffff; stroke-width: 0.5"/>
+    </g>
+   </g>
+   <g id="text_49">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="323.87" y="70.998717" transform="rotate(-0 323.87 70.998717)">80.7</text>
+   </g>
+   <g id="text_50">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="349.33" y="67.616157" transform="rotate(-0 349.33 67.616157)">81.8</text>
+   </g>
+   <g id="text_51">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: end" x="323.87" y="80.726341" transform="rotate(-0 323.87 80.726341)">78.5</text>
+   </g>
+   <g id="text_52">
+    <text style="fill: #181b1d; font: 700 6.6px 'Lato'; text-anchor: start" x="349.33" y="59.347677" transform="rotate(-0 349.33 59.347677)">83.0</text>
+   </g>
+  </g>
+  <g id="line2d_31">
+   <path d="M 23.76 125.064 
+L 37.224 125.064 
+" style="fill: none; stroke: #908e8d; stroke-width: 1.5; stroke-linecap: square"/>
+  </g>
+  <g id="line2d_32">
+   <path d="M 80.784 125.064 
+L 94.248 125.064 
+" style="fill: none; stroke-dasharray: 3.9,2.1; stroke-dashoffset: 0; stroke: #908e8d; stroke-width: 1.5; stroke-linecap: round"/>
+  </g>
+  <g id="line2d_33">
+   <path d="M 134.5608 125.064 
+L 148.0248 125.064 
+" style="fill: none; stroke-dasharray: 1.2,2.1; stroke-dashoffset: 0; stroke: #908e8d; stroke-width: 1.5; stroke-linecap: round"/>
+  </g>
+  <g id="text_53">
+   <text style="fill: #181b1d; font: 700 7.4px 'Lato'; text-anchor: start" x="3.96" y="7.26525" transform="rotate(-0 3.96 7.26525)">World-changing call, withheld turn</text>
+  </g>
+  <g id="text_54">
+   <text style="fill: #181b1d; font: 700 7.4px 'Lato'; text-anchor: start" x="147.24" y="7.313234" transform="rotate(-0 147.24 7.313234)">Official score</text>
+  </g>
+  <g id="text_55">
+   <text style="fill: #181b1d; font: 700 7.4px 'Lato'; text-anchor: start" x="290.52" y="7.313234" transform="rotate(-0 290.52 7.313234)">Decision accuracy, 223 pairs</text>
+  </g>
+  <g id="text_56">
+   <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="39.6" y="126.8155" transform="rotate(-0 39.6 126.8155)">miss_param</text>
+  </g>
+  <g id="text_57">
+   <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="96.624" y="126.8155" transform="rotate(-0 96.624 126.8155)">miss_func</text>
+  </g>
+  <g id="text_58">
+   <text style="fill: #908e8d; font: 6.2px 'Lato'; text-anchor: start" x="150.4008" y="126.8155" transform="rotate(-0 150.4008 126.8155)">base twins</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p803ece6021">
+   <rect x="15.84" y="32.4" width="59.04" height="75.168"/>
+  </clipPath>
+  <clipPath id="p208f0b81c2">
+   <rect x="78.48" y="32.4" width="59.04" height="75.168"/>
+  </clipPath>
+  <clipPath id="p777a5c94ea">
+   <rect x="159.12" y="32.4" width="59.04" height="75.168"/>
+  </clipPath>
+  <clipPath id="p1033978039">
+   <rect x="221.76" y="32.4" width="59.04" height="75.168"/>
+  </clipPath>
+  <clipPath id="p06d84d784b">
+   <rect x="302.4" y="32.4" width="68.4" height="75.168"/>
+  </clipPath>
+ </defs>
+</svg>

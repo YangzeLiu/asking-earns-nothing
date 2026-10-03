@@ -1,0 +1,9 @@
+Asking Earns Nothing: Scoring the Decision to Act in BFCL Multi-Turn
+Copyright 2026 Yangze Liu and Zhongyi Han
+
+This product includes material derived from the Berkeley Function Calling Leaderboard
+(BFCL) of the Gorilla project, University of California, Berkeley
+(https://github.com/ShishirPatil/gorilla), licensed under the Apache License, Version 2.0.
+The twin pairs, tool lists and reference calls in pairs_package/ and the bad-key list are
+derived from the BFCL multi-turn items and possible answers of bfcl-eval 2026.3.23, and
+bfcl/patches/ contains modifications to bfcl-eval 2026.3.23.
