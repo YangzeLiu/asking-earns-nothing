@@ -28,4 +28,5 @@ preferred-citation:
       affiliation: Shandong University
   year: 2026
   status: preprint
-  notes: "arXiv preprint, identifier to be added"
+  doi: "10.48550/arXiv.2610.04429"
+  url: "https://arxiv.org/abs/2610.04429"

@@ -2,7 +2,7 @@
 
 Yangze Liu and Zhongyi Han, Shandong University
 
-Paper: arXiv preprint, identifier to be added.
+Paper: [arXiv:2610.04429](https://arxiv.org/abs/2610.04429).
 
 BFCL multi-turn builds two of its four categories, `miss_func` and `miss_param`, around a
 turn on which the model is supposed to ask, and its scorer never looks at that turn. A
@@ -208,6 +208,9 @@ Berkeley, which is also released under the Apache License 2.0, see `NOTICE`.
   title  = {Asking Earns Nothing: Scoring the Decision to Act in {BFCL} Multi-Turn},
   author = {Liu, Yangze and Han, Zhongyi},
   year   = {2026},
-  note   = {arXiv preprint, identifier to be added}
+  eprint = {2610.04429},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url    = {https://arxiv.org/abs/2610.04429}
 }
 ```
